@@ -1,0 +1,64 @@
+{
+  "name": "aippt",
+  "repo": "Ceeon/AIPPT-Enterprise",
+  "description": "AIPPT-Enterprise - 用垫图 + AI 生成 PPT 的完整方法论",
+  "github_token": null,
+  "include_issues": true,
+  "max_issues": 100,
+  "include_changelog": true,
+  "include_releases": true,
+  "include_code": true,
+  "file_patterns": [
+    "*.md",
+    "scripts/*.js"
+  ]
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
