@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Claude Code Skills 目录
 
 这是你的自定义 Claude Code skills 存储目录。
@@ -80,17 +81,20 @@ unzip /path/to/your-skill.skill
 - **skill-seekers** - 从文档/GitHub/PDF 创建 skills
 - **markitdown** - 文件格式转 Markdown
 - **agent-builder** - AI Agent 搭建助手
+- **req-change-workflow** - 需求/功能变更工作流
 
 ### 📦 产品相关
 - **ai-prd-assistant** - AI 产品需求文档助手
 - **ai-product-design** - AI 产品设计助手
 - **product-assistant** - 产品助手
+- **prd-doc-writer** - 故事驱动的 PRD 撰写助手
 
 ### ✍️ 内容创作
 - **ai-video-creator** - AI 视频创作助手
 - **mp-writing-assistant** - 公众号写作助手
 - **writing-assistant** - 通用写作助手
 - **design-assistant** - 设计助手
+- **image-assistant** - 配图助手
 
 ### 💼 职业发展
 - **interview-assistant** - 面试准备助手
@@ -180,3 +184,7 @@ skill-name/
 - **install_skill.py**: `G:\BaiduSyncdisk\tools\skill-creator\scripts\install_skill.py`
 - **package_skill.py**: `G:\BaiduSyncdisk\tools\skill-creator\scripts\package_skill.py`
 - **quick_validate.py**: `G:\BaiduSyncdisk\tools\skill-creator\scripts\quick_validate.py`
+=======
+# skills
+my skills manage hub
+>>>>>>> dd3eba6d9f2727e3093495a34e034d63e5316290

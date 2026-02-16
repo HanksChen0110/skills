@@ -255,6 +255,24 @@ Usage notes:
 <location>global</location>
 </skill>
 
+<skill>
+<name>image-assistant</name>
+<description>配图助手 - 把文章/模块内容转成统一风格、少字高可读的 16:9 信息图提示词；先定“需要几张图+每张讲什么”，再压缩文案与隐喻，最后输出可直接复制的生图提示词并迭代。</description>
+<location>global</location>
+</skill>
+
+<skill>
+<name>prd-doc-writer</name>
+<description>Write and iteratively refine PRD/需求文档 with a story-driven structure and strict staged confirmations. Use when the user asks to 梳理/撰写/完善 PRD、需求文档、用户故事、验收标准。</description>
+<location>global</location>
+</skill>
+
+<skill>
+<name>req-change-workflow</name>
+<description>Standardize requirement/feature changes in an existing codebase by turning "改需求/需求变更/调整交互/改功能/重构流程" into a repeatable loop: clarify, baseline, impact, design, implement, validate, and document.</description>
+<location>global</location>
+</skill>
+
 </available_skills>
 <!-- SKILLS_TABLE_END -->
 
