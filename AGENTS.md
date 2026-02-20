@@ -273,6 +273,12 @@ Usage notes:
 <location>global</location>
 </skill>
 
+<skill>
+<name>obsidian-notes</name>
+<description>"Obsidian 笔记管理助手。当用户说「保存笔记」「记笔记」「创建笔记」「记录到Obsidian」「写入Obsidian」「保存到Obsidian」「capture note」「save note」时使用。根据笔记内容自动判断存放位置（I-收集箱/A-行动笔记/P-项目笔记/K-主题笔记/N-概念笔记），应用 Vault 内模板，创建格式规范的 Obsidian 笔记。"</description>
+<location>global</location>
+</skill>
+
 </available_skills>
 <!-- SKILLS_TABLE_END -->
 
