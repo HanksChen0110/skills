@@ -89,8 +89,6 @@ unzip /path/to/your-skill.skill
 - **product-assistant** - 产品助手
 - **prd-doc-writer** - 故事驱动的 PRD 撰写助手
 
-### ✍️ 内容创作
-- **ai-video-creator** - AI 视频创作助手
 - **mp-writing-assistant** - 公众号写作助手
 - **writing-assistant** - 通用写作助手
 - **design-assistant** - 设计助手

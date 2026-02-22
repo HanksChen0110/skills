@@ -22,12 +22,6 @@ Usage notes:
 <available_skills>
 
 <skill>
-<name>agency-checklist</name>
-<description>"自主性（Agency）激发与检查清单。当用户说「激发自主性」「检查自主性」「提高自主性」「自主性检查」「我该主动做什么」「如何掌控人生」「跳出思维惯性」时使用。提供自主性五大核心洞见、三特征识别法、实践方法论和检查清单。帮助用户识别何时需要激发自主性，并提供行动策略让思考总能多一层。Agency activation and self-check toolkit. Use when user wants to activate agency, check their agency level, improve proactiveness, or break out of mental conformity. Provides 5 core insights about agency, 3-trait recognition method, practice methodology and checklist."</description>
-<location>global</location>
-</skill>
-
-<skill>
 <name>agent-builder</name>
 <description>帮助搭建AI Agent的技能助手。当用户说「搭建Agent」「创建Agent」「Agent搭建」「智能体搭建」「设计AI系统」时使用。提供Agent核心哲学、四要素、六大核心要素、工作流搭建心法、RAG详解、Prompt工程等完整方法论。适用于AI Agent开发、智能体构建、工作流设计、自主AI系统开发。</description>
 <location>global</location>
@@ -54,18 +48,6 @@ Usage notes:
 <skill>
 <name>ai-product-design</name>
 <description>帮助进行AI产品设计的技能助手。当用户说「AI产品设计」「设计AI产品」「产品设计思维」时使用。提供AI原生产品三维范式（XYZ轴）、动态五阶模型、数据闭环与数据飞轮、防偏误手册等完整方法论。适用于AI产品规划、产品设计决策、用户体验设计。</description>
-<location>global</location>
-</skill>
-
-<skill>
-<name>ai-video-creator</name>
-<description>帮助进行AI视频创作相关工作的技能助手。当用户说「AI视频」「视频创作」「AI视频制作」时使用。提供AI视频创作全流程、推荐工具、创作技巧、常见问题解答等完整方法论。适用于AI视频制作、视频创作、内容创作。</description>
-<location>global</location>
-</skill>
-
-<skill>
-<name>aippt</name>
-<description>AIPPT - 基于模板定制化生成 PPT。垫图约束风格 → 提示词替换内容 → AI 生图 → 打包 PPTX。</description>
 <location>global</location>
 </skill>
 
@@ -154,12 +136,6 @@ Usage notes:
 </skill>
 
 <skill>
-<name>ticktick-task-manager</name>
-<description>"滴答清单任务管理器。通过自然语言创建、查询、同步滴答清单任务。支持四象限分类（重要紧急/重要不紧急/不重要紧急/不重要不紧急），自动同步到Obsidian Markdown文件。触发词：记任务、创建任务、添加任务、新任务、滴答清单、任务管理、同步任务、查看任务。"</description>
-<location>global</location>
-</skill>
-
-<skill>
 <name>vibe-coding</name>
 <description>Transform an AI agent into a tasteful, disciplined development partner. Not just a code generator, but a collaborator with professional standards, transparent decision-making, and craftsmanship. Use for any development task - building features, fixing bugs, designing systems, refactoring. The human provides vision and decisions. The agent provides execution with taste and discipline.</description>
 <location>global</location>
@@ -180,18 +156,6 @@ Usage notes:
 <skill>
 <name>github-to-skills</name>
 <description>Automated factory for converting GitHub repositories into specialized AI skills. Use this skill when the user provides a GitHub URL and wants to "package", "wrap", or "create a skill" from it. It automatically fetches repository details, latest commit hashes, and generates a standardized skill structure with enhanced metadata suitable for lifecycle management.</description>
-<location>global</location>
-</skill>
-
-<skill>
-<name>log-viewer</name>
-<description>|</description>
-<location>global</location>
-</skill>
-
-<skill>
-<name>lovart-painter</name>
-<description>利用 Lovart 会员权益进行专业生图的专家</description>
 <location>global</location>
 </skill>
 
@@ -226,36 +190,6 @@ Usage notes:
 </skill>
 
 <skill>
-<name>剪口播</name>
-<description>口播视频转录和口误识别。生成审查稿和删除任务清单。触发词：剪口播、处理视频、识别口误</description>
-<location>global</location>
-</skill>
-
-<skill>
-<name>剪辑</name>
-<description>执行视频剪辑。根据确认的删除任务执行FFmpeg剪辑，循环直到零口误，生成字幕。触发词：执行剪辑、开始剪、确认剪辑</description>
-<location>global</location>
-</skill>
-
-<skill>
-<name>字幕</name>
-<description>字幕生成与烧录。转录→词典纠错→审核→烧录。触发词：加字幕、生成字幕、字幕</description>
-<location>global</location>
-</skill>
-
-<skill>
-<name>安装</name>
-<description>环境准备。安装依赖、下载模型、验证环境。触发词：安装、环境准备、初始化</description>
-<location>global</location>
-</skill>
-
-<skill>
-<name>自更新</name>
-<description>自更新 skills。记录用户反馈，更新方法论和规则。触发词：更新规则、记录反馈、改进skill</description>
-<location>global</location>
-</skill>
-
-<skill>
 <name>image-assistant</name>
 <description>配图助手 - 把文章/模块内容转成统一风格、少字高可读的 16:9 信息图提示词；先定“需要几张图+每张讲什么”，再压缩文案与隐喻，最后输出可直接复制的生图提示词并迭代。</description>
 <location>global</location>
@@ -276,6 +210,120 @@ Usage notes:
 <skill>
 <name>obsidian-notes</name>
 <description>"Obsidian 笔记管理助手。当用户说「保存笔记」「记笔记」「创建笔记」「记录到Obsidian」「写入Obsidian」「保存到Obsidian」「capture note」「save note」时使用。根据笔记内容自动判断存放位置（I-收集箱/A-行动笔记/P-项目笔记/K-主题笔记/N-概念笔记），应用 Vault 内模板，创建格式规范的 Obsidian 笔记。"</description>
+<location>global</location>
+</skill>
+
+<skill>
+<name>baoyu-article-illustrator</name>
+<description>Analyzes article structure, identifies positions requiring visual aids, generates illustrations with Type × Style two-dimension approach. Use when user asks to "illustrate article", "add images", "generate images for article", or "为文章配图".</description>
+<location>global</location>
+</skill>
+
+<skill>
+<name>baoyu-comic</name>
+<description>Knowledge comic creator supporting multiple art styles and tones. Creates original educational comics with detailed panel layouts and sequential image generation. Use when user asks to create "知识漫画", "教育漫画", "biography comic", "tutorial comic", or "Logicomix-style comic".</description>
+<location>global</location>
+</skill>
+
+<skill>
+<name>baoyu-compress-image</name>
+<description>Compresses images to WebP (default) or PNG with automatic tool selection. Use when user asks to "compress image", "optimize image", "convert to webp", or reduce image file size.</description>
+<location>global</location>
+</skill>
+
+<skill>
+<name>baoyu-cover-image</name>
+<description>Generates article cover images with 5 dimensions (type, palette, rendering, text, mood) combining 9 color palettes and 6 rendering styles. Supports cinematic (2.35:1), widescreen (16:9), and square (1:1) aspects. Use when user asks to "generate cover image", "create article cover", or "make cover".</description>
+<location>global</location>
+</skill>
+
+<skill>
+<name>baoyu-danger-gemini-web</name>
+<description>Generates images and text via reverse-engineered Gemini Web API. Supports text generation, image generation from prompts, reference images for vision input, and multi-turn conversations. Use when other skills need image generation backend, or when user requests "generate image with Gemini", "Gemini text generation", or needs vision-capable AI generation.</description>
+<location>global</location>
+</skill>
+
+<skill>
+<name>baoyu-danger-x-to-markdown</name>
+<description>Converts X (Twitter) tweets and articles to markdown with YAML front matter. Uses reverse-engineered API requiring user consent. Use when user mentions "X to markdown", "tweet to markdown", "save tweet", or provides x.com/twitter.com URLs for conversion.</description>
+<location>global</location>
+</skill>
+
+<skill>
+<name>baoyu-format-markdown</name>
+<description>Formats plain text or markdown files with frontmatter, titles, summaries, headings, bold, lists, and code blocks. Use when user asks to "format markdown", "beautify article", "add formatting", or improve article layout. Outputs to {filename}-formatted.md.</description>
+<location>global</location>
+</skill>
+
+<skill>
+<name>baoyu-image-gen</name>
+<description>AI image generation with OpenAI, Google and DashScope APIs. Supports text-to-image, reference images, aspect ratios. Sequential by default; parallel generation available on request. Use when user asks to generate, create, or draw images.</description>
+<location>global</location>
+</skill>
+
+<skill>
+<name>baoyu-infographic</name>
+<description>Generates professional infographics with 20 layout types and 17 visual styles. Analyzes content, recommends layout×style combinations, and generates publication-ready infographics. Use when user asks to create "infographic", "信息图", "visual summary", or "可视化".</description>
+<location>global</location>
+</skill>
+
+<skill>
+<name>baoyu-markdown-to-html</name>
+<description>Converts Markdown to styled HTML with WeChat-compatible themes. Supports code highlighting, math, PlantUML, footnotes, alerts, and infographics. Use when user asks for "markdown to html", "convert md to html", "md转html", or needs styled HTML output from markdown.</description>
+<location>global</location>
+</skill>
+
+<skill>
+<name>baoyu-post-to-wechat</name>
+<description>Posts content to WeChat Official Account (微信公众号) via API or Chrome CDP. Supports article posting (文章) with HTML, markdown, or plain text input, and image-text posting (贴图, formerly 图文) with multiple images. Use when user mentions "发布公众号", "post to wechat", "微信公众号", or "贴图/图文/文章".</description>
+<location>global</location>
+</skill>
+
+<skill>
+<name>baoyu-post-to-x</name>
+<description>Posts content and articles to X (Twitter). Supports regular posts with images/videos and X Articles (long-form Markdown). Uses real Chrome with CDP to bypass anti-automation. Use when user asks to "post to X", "tweet", "publish to Twitter", or "share on X".</description>
+<location>global</location>
+</skill>
+
+<skill>
+<name>baoyu-slide-deck</name>
+<description>Generates professional slide deck images from content. Creates outlines with style instructions, then generates individual slide images. Use when user asks to "create slides", "make a presentation", "generate deck", "slide deck", or "PPT".</description>
+<location>global</location>
+</skill>
+
+<skill>
+<name>baoyu-url-to-markdown</name>
+<description>Fetch any URL and convert to markdown using Chrome CDP. Supports two modes - auto-capture on page load, or wait for user signal (for pages requiring login). Use when user wants to save a webpage as markdown.</description>
+<location>global</location>
+</skill>
+
+<skill>
+<name>baoyu-xhs-images</name>
+<description>Generates Xiaohongshu (Little Red Book) infographic series with 10 visual styles and 8 layouts. Breaks content into 1-10 cartoon-style images optimized for XHS engagement. Use when user mentions "小红书图片", "XHS images", "RedNote infographics", "小红书种草", or wants social media infographics for Chinese platforms.</description>
+<location>global</location>
+</skill>
+
+<skill>
+<name>miro-automation</name>
+<description>Automate Miro tasks via Rube MCP (Composio): boards, items, sticky notes, frames, sharing, connectors. Always search tools first for current schemas.</description>
+<location>global</location>
+</skill>
+
+<skill>
+<name>planning-with-files</name>
+<description>Transforms workflow to use Manus-style persistent markdown files for planning, progress tracking, and knowledge storage. Use when starting complex tasks, multi-step projects, research tasks, or when the user mentions planning, organizing work, tracking progress, or wants structured output.</description>
+<location>global</location>
+</skill>
+
+<skill>
+<name>skill-lookup</name>
+<description>Search, retrieve, and install Agent Skills from the prompts.chat registry using MCP tools. Use when the user asks to find skills, browse skill catalogs, install a skill for Claude, or extend Claude's capabilities with reusable AI agent components.</description>
+<location>global</location>
+</skill>
+
+<skill>
+<name>using-superpowers</name>
+<description>Use when starting any conversation - establishes how to find and use skills, requiring Skill tool invocation before ANY response including clarifying questions</description>
 <location>global</location>
 </skill>
 
