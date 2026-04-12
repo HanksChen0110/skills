@@ -104,7 +104,7 @@ AI 产品设计不再是"画图+写文档"，而是**"定义契约+搭建飞轮"
 
 ---
 ## 关联文档
-[[WaytoAGI COZE训练营活动感想与总结]]
+[[30_研究/AI人工智能/WaytoAGI/WaytoAGI COZE训练营活动感想与总结]]
 [[@skills/product-design-checklist]]
 
 

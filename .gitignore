@@ -35,7 +35,11 @@ skills_report.txt
 
 # === 打包产物 ===
 *.skill
+*.zip
 dist/
+
+# === macOS 解压残留 ===
+__MACOSX/
 
 
 
