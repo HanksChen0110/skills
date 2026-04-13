@@ -202,6 +202,20 @@ description: |
 - 为Top 3生成摘要
 - 提示用户可以调用 `/wechat-title` 获得完整评分
 
+**关键规则**：选定最终标题和配套摘要后，必须在输出文章中**直接嵌入**推荐的标题和摘要。嵌入方式：
+- 如果文章使用 YAML frontmatter，在 frontmatter 中增加 `recommend_title` 和 `recommend_digest` 字段
+- 如果文章无 frontmatter，在文章最顶部（正文之前）用引用块标注推荐标题和摘要
+
+示例（有 frontmatter 时）：
+```yaml
+---
+title: "文章主标题"
+recommend_title: "推荐标题文字"
+recommend_digest: "推荐摘要文字"
+status: draft
+---
+```
+
 ---
 
 ## Step 7: 排版输出
@@ -210,6 +224,7 @@ description: |
 - 段落间空行分隔
 - 关键洞察加粗或引用块
 - 图片位置标记: `[图片：描述]`
+- **必须包含推荐标题和摘要**（见 Step 6 关键规则）
 - 输出markdown格式，兼容 `baoyu-markdown-to-html` 和 `baoyu-post-to-wechat` skill
 
 ---
