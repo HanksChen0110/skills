@@ -1,0 +1,4 @@
+﻿interface:
+  display_name: "功能设计生成器"
+  short_description: "把需求分析转成可评审的功能设计说明"
+  default_prompt: "Use $functional-design-writer to convert this requirement analysis into a functional design document."

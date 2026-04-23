@@ -1,0 +1,5 @@
+interface:
+  display_name: "需规审核器"
+  short_description: "审核模板一致性、功能描述质量、尾章完整性和可追溯性"
+  default_prompt: "Use $req-spec-reviewer to review a Chinese requirements specification generated from a Word template, focusing on template compliance, function-description quality, chapter completeness, traceability, and delivery readiness."
+

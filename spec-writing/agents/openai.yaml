@@ -1,0 +1,4 @@
+version: 1
+display_name: Spec Writing
+short_description: Route Chinese spec-writing tasks to the right writer or reviewer skill.
+default_prompt: Classify the user's spec-writing request by artifact type and section scope, route it to the right child skill or minimal child-skill set, and preserve the confirmed Word template structure.

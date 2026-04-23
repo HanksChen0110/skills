@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xsd:schema xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+	attributeFormDefault="unqualified" elementFormDefault="qualified"
+	targetNamespace="http://schemas.openxmlformats.org/markup-compatibility/2006"
+	xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+
+  <!--  Objective 1 -->
+  <xsd:attribute name="Ignorable" type="xsd:string" />
+
+  <!--  Objective 2 -->
+	<xsd:attribute name="MustUnderstand" type="xsd:string"  />
+	<xsd:attribute name="ProcessContent" type="xsd:string"  />
+
+	<xsd:element name="AlternateContent">
+		<xsd:complexType>
+			<xsd:sequence>
+				<xsd:element name="Choice" minOccurs="0" maxOccurs="unbounded">
+					<xsd:complexType>
+						<xsd:sequence>
+							<xsd:any minOccurs="0" maxOccurs="unbounded"
+								processContents="strict">
+							</xsd:any>
+						</xsd:sequence>
+						<xsd:attribute name="Requires" type="xsd:string" use="required" />
+						<xsd:attribute ref="mc:Ignorable" use="optional" />
+						<xsd:attribute ref="mc:MustUnderstand" use="optional" />
+						<xsd:attribute ref="mc:ProcessContent" use="optional" />
+					</xsd:complexType>
+				</xsd:element>
+				<xsd:element name="Fallback" minOccurs="0" maxOccurs="1">
+					<xsd:complexType>
+						<xsd:sequence>
+							<xsd:any minOccurs="0" maxOccurs="unbounded"
+								processContents="strict">
+							</xsd:any>
+						</xsd:sequence>
+						<xsd:attribute ref="mc:Ignorable" use="optional" />
+						<xsd:attribute ref="mc:MustUnderstand" use="optional" />
+						<xsd:attribute ref="mc:ProcessContent" use="optional" />
+					</xsd:complexType>
+				</xsd:element>
+			</xsd:sequence>
+			<xsd:attribute ref="mc:Ignorable" use="optional" />
+			<xsd:attribute ref="mc:MustUnderstand" use="optional" />
+			<xsd:attribute ref="mc:ProcessContent" use="optional" />
+		</xsd:complexType>
+	</xsd:element>
+</xsd:schema>
