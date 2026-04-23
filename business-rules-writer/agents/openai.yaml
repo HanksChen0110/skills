@@ -1,0 +1,3 @@
+﻿display_name: 业务规则整理
+short_description: 整理需求中的业务规则、条件和例外。
+default_prompt: 整理这份需求里的业务规则，输出清晰的规则清单，并标出待确认项。

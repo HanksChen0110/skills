@@ -1,0 +1,4 @@
+interface:
+  display_name: "DOCX to Markdown"
+  short_description: "Convert docx to markdown with headings, tables, and images preserved"
+  default_prompt: "Use $docx-to-markdown-fidelity to convert this .docx into Markdown while preserving heading levels, tables, figure captions, and embedded images for Obsidian or another note system."

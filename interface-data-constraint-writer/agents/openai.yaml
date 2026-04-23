@@ -1,0 +1,4 @@
+interface:
+  display_name: "接口约束生成器"
+  short_description: "整理接口字段、校验规则、枚举和数据映射"
+  default_prompt: "Use $interface-data-constraint-writer to convert these design notes or draft specs into a clear interface and data-constraint document."

@@ -1,0 +1,4 @@
+interface:
+  display_name: "状态异常生成器"
+  short_description: "整理状态流转、异常分支、回退与恢复规则"
+  default_prompt: "Use $state-transition-exception-writer to turn these requirements or process notes into a clear state-transition and exception-handling draft."

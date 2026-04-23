@@ -1,0 +1,4 @@
+﻿interface:
+  display_name: "用户故事生成器"
+  short_description: "把需求分析或流程拆成结构化用户故事"
+  default_prompt: "Use $user-story-writer to convert this requirement analysis into a set of clear Chinese user stories."

@@ -1,0 +1,4 @@
+interface:
+  display_name: "GJB438C需规生成器"
+  short_description: "按GJB 438C风格分批生成整份需求规格说明书，并严格继承原文格式"
+  default_prompt: "Use $gjb438c-req-spec-writer to draft or continue a full Chinese requirements specification in GJB 438C style, defaulting to staged delivery with strict source-format preservation."

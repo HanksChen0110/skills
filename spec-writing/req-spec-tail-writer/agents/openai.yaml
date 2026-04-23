@@ -1,0 +1,4 @@
+interface:
+  display_name: "需规后半段生成器"
+  short_description: "在前文确认后续写3.3至7章，补齐接口、数据、质量、验收与交付"
+  default_prompt: "Use $req-spec-tail-writer to continue a Chinese requirements specification from section 3.3 through chapter 7 after earlier sections are confirmed, while preserving the source document's format."

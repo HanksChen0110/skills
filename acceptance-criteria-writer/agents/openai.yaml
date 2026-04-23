@@ -1,0 +1,4 @@
+﻿interface:
+  display_name: "验收标准生成器"
+  short_description: "从需求、故事或功能设计中提炼可检查的验收标准"
+  default_prompt: "Use $acceptance-criteria-writer to derive acceptance criteria from these requirements or user stories."

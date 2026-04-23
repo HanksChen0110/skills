@@ -1,0 +1,4 @@
+interface:
+  display_name: "需规第3章生成器"
+  short_description: "在前稿确认后续写3.2能力需求，并保留原文格式"
+  default_prompt: "Use $req-spec-ch3-writer to continue or standardize section 3.2 of a Chinese requirements specification after the earlier draft is confirmed, while preserving the source document's format."
