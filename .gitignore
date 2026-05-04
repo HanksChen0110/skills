@@ -33,6 +33,9 @@ skills_report.txt
 **/secrets.md
 **/config/secrets.*
 
+# === 隐私文件 ===
+aboutme.md
+
 # === 打包产物 ===
 *.skill
 *.zip
