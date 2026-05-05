@@ -1,0 +1,122 @@
+# ── 文档处理 ──
+pdf
+docx
+docx-to-markdown-fidelity
+make-pdf
+xlsx
+pptx
+markitdown
+
+# ── 图片与媒体 ──
+baoyu-image-gen
+baoyu-compress-image
+baoyu-cover-image
+baoyu-infographic
+baoyu-format-markdown
+baoyu-markdown-to-html
+image-assistant
+
+# ── 内容写作 ──
+writing-assistant
+content-remix
+media-writer
+weekly-report-writer
+wechat-writer
+wechat-title
+mp-writing-assistant
+khazix-writer
+
+# ── Obsidian 与知识管理 ──
+obsidian
+obsidian-notes
+json-canvas
+
+# ── 规划与执行 ──
+autoplan
+executing-plans
+writing-plans
+planning-with-files
+
+# ── 记忆与上下文 ──
+context-save
+context-restore
+memory-extractor
+
+# ── 研究与 Web ──
+browse
+web-access
+
+# ── 技能管理 ──
+skill-creator
+skill-manager
+find-skills
+skill-launcher
+skill-lookup
+skill-seekers
+writing-skills
+
+# ── 工具 ──
+codex
+freeze
+unfreeze
+health
+
+# ── 需规写作套件 ──
+req-spec-suite
+
+# ── GStack ──
+gstack
+gstack-upgrade
+
+# ── Superpowers 核心 ──
+using-superpowers
+thought-mining
+dream-memory
+brainstorming
+investigate
+learn
+hue
+pua
+
+# ── 开发工作流 ──
+ship
+pr-merge
+qa
+qa-only
+review
+retro
+careful
+guard
+vibe-coding
+
+# ── Superpowers 规划与审查 ──
+plan-ceo-review
+plan-design-review
+plan-devex-review
+plan-eng-review
+plan-tune
+problem-solving-sop
+user-story-writer
+
+# ── Superpowers 代码审查与验证 ──
+receiving-code-review
+requesting-code-review
+systematic-debugging
+test-driven-development
+verification-before-completion
+verification-gate
+
+# ── Superpowers Agent 编排 ──
+dispatching-parallel-agents
+subagent-driven-development
+pair-agent
+proactive-agent
+swarm-coordinator
+office-hours
+
+# ── Superpowers Git 与部署 ──
+using-git-worktrees
+setup-deploy
+
+# ── AI 产品套件 ──
+ai-product-suite
