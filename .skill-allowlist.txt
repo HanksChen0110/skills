@@ -119,4 +119,6 @@ using-git-worktrees
 setup-deploy
 
 # ── AI 产品套件 ──
+ai-pm-coaching
+ai-pm-interview
 ai-product-suite
