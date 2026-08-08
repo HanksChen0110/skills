@@ -1,0 +1,7 @@
+interface:
+  display_name: "Excalidraw Canvas Builder"
+  short_description: "Build viewable Excalidraw canvases"
+  default_prompt: "Use $excalidraw-canvas-builder to organize my content into a directly viewable Obsidian Excalidraw canvas and return the final file path."
+
+policy:
+  allow_implicit_invocation: true

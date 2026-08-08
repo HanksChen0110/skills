@@ -1,0 +1,4 @@
+interface:
+  display_name: "Resume Optimizer"
+  short_description: "Optimize Chinese resumes, especially AI PM resumes"
+  default_prompt: "Use $resume-optimizer to confirm my candidate profile, then rewrite my resume from my resume draft, project documents, and target role."

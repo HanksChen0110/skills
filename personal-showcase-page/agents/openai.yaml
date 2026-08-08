@@ -1,0 +1,4 @@
+interface:
+  display_name: "个人展示页作品包"
+  short_description: "基于 CHL 作品包资料生成个人展示页 HTML 和作品讲述稿"
+  default_prompt: "Use $personal-showcase-page 基于我的作品包资料，生成或优化个人展示页，并输出作品讲述稿。"

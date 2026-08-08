@@ -1,0 +1,8 @@
+interface:
+  display_name: "gx-zhks frontend design"
+  short_description: "观想智慧矿山青绿主题与AI Copilot前端设计规范，含旧版显式路由"
+  brand_color: "#1ba2a0"
+  default_prompt: "Use $gx-zhks-frontend-design to design this smart-mine interface. If I have not specified a design route, ask me to choose A) the recommended teal-mining theme or B) the explicit-only legacy dark platform style before visual work."
+
+policy:
+  allow_implicit_invocation: true

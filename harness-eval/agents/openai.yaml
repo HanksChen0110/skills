@@ -1,0 +1,7 @@
+interface:
+  display_name: "Agent Harness Evaluator"
+  short_description: "Evaluate Agent product harness maturity"
+  default_prompt: "Use $harness-eval to assess this Agent product's harness maturity and give stage-specific improvement advice."
+
+policy:
+  allow_implicit_invocation: true
