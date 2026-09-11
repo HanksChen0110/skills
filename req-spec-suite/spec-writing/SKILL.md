@@ -114,8 +114,14 @@ When the user is not asking for a new document but for targeted repair, route by
 
 ## Recent Delivery Rules
 
+- When the user provides a polished `.docx` sample, treat it as the live formatting baseline. Extract and reuse its cover page, signing page, document modification record, table of contents title, heading fonts/sizes, body font/size, paragraph spacing, footer/page-number pattern, and table style before generating or repairing the Word deliverable.
+- For the current formal Chinese spec baseline, do not start directly from the body title if the benchmark has front matter. Preserve front matter in this order when present: cover page -> signing page -> document modification record -> table of contents -> body.
+- The table of contents title should follow the benchmark wording and spacing, for example `目  次` when that is what the sample uses. The TOC must be driven only by real heading styles.
 - In Word deliverables, table captions must stay outside tables. Do not merge `表 X ...` captions into table header rows or into the first cell of any table.
 - If a table already contains only header fields in row 1, treat that as correct and do not add caption text into the table.
+- Formal spec table headers should not use blue, gray, or other colored fills unless the user sample explicitly uses them. The default table header is plain white background, centered, Songti, bold, and the same size as the table body.
+- Formal spec table body text should normally use Songti at the sample's table size, often around small fifth size or `9pt`. Do not shrink tables mechanically just to fit more text, and do not invent decorative table themes.
+- Table alignment must follow column roles: short metadata columns centered, identifier columns centered when compact, narrative columns left aligned, and remarks left aligned once they carry explanatory text.
 - Unnumbered inline mini-headings in body text should be upgraded to numbered headings when they function as real subsections. Avoid leaving standalone labels such as `核心功能模块边界` without a section number.
 - Keep the document in a true top-down structure: names, roles, subsystems, and data objects introduced later must be introduced earlier in `系统概述` or `需求总述`.
 - Four-level headings such as `3.2.3.1 功能分解` must use `黑体`, not `微软雅黑`.

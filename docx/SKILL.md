@@ -94,10 +94,15 @@ Practical checks:
   - narrative columns such as `功能描述/内容描述/功能说明/用例目标/解释/变化说明` should get the widest width and usually be left aligned
   - `备注` should stay centered only when it contains short tags; use left alignment once it carries explanatory text
 - Preserve table-level choices seen in the benchmark:
+  - do not add colored fills to table headers unless the benchmark explicitly uses them
+  - default formal-spec table headers are plain white background, centered, Songti, bold, and the same size as table body text
+  - table body text should follow the benchmark font and size; for the current formal Chinese spec baseline this is commonly Songti at about 9pt/small-fifth size
   - table body columns may use mixed alignments in one table
   - widths should be intentionally redistributed toward heavy-reading columns rather than mechanically equalized
   - avoid forcing vertical-center alignment in multiline body rows unless the benchmark clearly does so
   - keep fixed column widths when the benchmark uses them instead of relying on autofit
+- When a benchmark `.docx` has front matter, preserve it as part of the document structure: cover page, signing page, document modification record, table of contents, then body. Do not start directly at the body title just because the Markdown source starts there.
+- For benchmark-based Chinese spec generation, copy the visible TOC title style and wording such as `目  次`; keep the TOC driven only by real heading styles.
 
 ---
 

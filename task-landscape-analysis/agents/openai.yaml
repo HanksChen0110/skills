@@ -1,0 +1,4 @@
+interface:
+  display_name: "任务全景分析"
+  short_description: "从九个维度梳理业务任务、专业工作与系统流程的完整全貌"
+  default_prompt: "使用 $task-landscape-analysis 拆解：[在此填写任务名称]，先建立全貌，不要直接优化。"
