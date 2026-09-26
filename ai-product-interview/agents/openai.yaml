@@ -1,0 +1,4 @@
+interface:
+  display_name: "AI 产品面试"
+  short_description: "面试官招聘出题与复盘、学员真实项目备考"
+  default_prompt: "Use $ai-product-interview to choose interviewer or candidate-prep mode, then work from the provided JD, resume, PRD, and answer evidence without inventing facts."

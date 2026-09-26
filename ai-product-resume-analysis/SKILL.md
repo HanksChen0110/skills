@@ -1,9 +1,9 @@
 ---
-name: resume-optimizer
-description: "Chinese resume diagnosis, rewriting, polishing, and optimization. Use when the user says 帮我优化简历, 优化简历, 修改简历, 润色简历, 简历诊断, 简历重写, or asks to improve 个人优势/工作经历/项目经历. Especially strong for AI产品经理 resumes with PRD/project documents, JD matching, LLM/RAG/Agent/Prompt/Bad Case project packaging, and interview-oriented positioning."
+name: ai-product-resume-analysis
+description: "AI 产品简历分析。用于 AI 产品经理简历诊断、优化、重写，以及结合 JD、PRD 和项目材料分析真实证据与岗位匹配；用户说优化简历、分析简历、修改简历、润色简历、简历诊断，或要求改个人优势/工作经历/项目经历时使用。"
 ---
 
-# Resume Optimizer
+# AI 产品简历分析
 
 ## Role
 
