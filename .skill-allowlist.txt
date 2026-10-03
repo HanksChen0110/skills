@@ -1,9 +1,10 @@
-# Generated from CC Switch active skills on 2026-09-11.
+# Generated from CC Switch active skills on 2026-10-03.
 # Includes skills enabled in at least one configured runtime.
 
 ab-testing
 ai-pm-coaching
-ai-pm-interview
+ai-product-interview
+ai-product-resume-analysis
 ai-product-suite
 ai-seo
 analytics
@@ -56,6 +57,31 @@ image-assistant
 investigate
 json-canvas
 khazix-writer
+lark-approval
+lark-attendance
+lark-base
+lark-calendar
+lark-contact
+lark-doc
+lark-drive
+lark-event
+lark-im
+lark-mail
+lark-markdown
+lark-minutes
+lark-okr
+lark-openapi-explorer
+lark-shared
+lark-sheets
+lark-skill-maker
+lark-slides
+lark-task
+lark-vc
+lark-vc-agent
+lark-whiteboard
+lark-wiki
+lark-workflow-meeting-summary
+lark-workflow-standup-report
 launch
 leader
 make-pdf
@@ -93,7 +119,6 @@ qa-only
 receiving-code-review
 req-spec-suite
 requesting-code-review
-resume-optimizer
 review
 seo-audit
 skill-creator

@@ -5,6 +5,8 @@ description: "仅在用户明确调用 /comet-design，或由 Comet 根 Skill/ru
 
 # Comet 阶段 2：深度设计（Design）
 
+在 Design Doc 与 delta spec 定稿后、进入 build 前，按 `comet/reference/start-gate.md` 对当前版本完成开工确认与预算记录。原有设计方案确认保留；若设计期间更改了范围、验收场景或规则，必须展示新版本重新确认，不得沿用 open 阶段的笼统确认。
+
 ## 前置条件
 
 - 活跃 change 已存在（proposal.md、design.md、tasks.md）

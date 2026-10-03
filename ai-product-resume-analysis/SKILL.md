@@ -1,6 +1,6 @@
 ---
 name: ai-product-resume-analysis
-description: "AI 产品简历分析。用于 AI 产品经理简历诊断、优化、重写，以及结合 JD、PRD 和项目材料分析真实证据与岗位匹配；用户说优化简历、分析简历、修改简历、润色简历、简历诊断，或要求改个人优势/工作经历/项目经历时使用。"
+description: "AI 产品简历分析。用于 AI 产品经理简历诊断、优化、重写，以及结合 JD、PRD 和项目材料分析产品能力、数据口径与岗位匹配；支持学员的课程和模拟项目。用户说优化简历、分析简历、修改简历、润色简历、简历诊断，或要求改个人优势/工作经历/项目经历时使用。"
 ---
 
 # AI 产品简历分析
@@ -59,7 +59,7 @@ Always cover:
 1. Diagnose problems in `个人总结/个人优势`, `工作经历`, and `项目介绍`.
 2. Rewrite those sections using the user's real resume, PRD, and project facts.
 3. Ensure the final content can be put directly into a resume.
-4. Preserve truthfulness: distinguish real outcomes from PRD estimates or target metrics.
+4. Keep project context and metric logic consistent; for course/simulated projects, focus feedback on definitions, assumptions, calculations, and consistency rather than authenticity reminders.
 
 ## First-Principles Resume Lens
 
@@ -94,13 +94,25 @@ When optimizing AI PM resumes, explicitly correct these failure modes:
 - Do not copy long PRD text into the resume. Extract resume-grade language.
 - Do not package an intern as a P7+ owner.
 - If a metric is from a PRD estimate, write `预计`, `基于样本测算`, or `MVP目标`; do not write it as an actual shipped result.
-- If useful metrics are missing, say `建议补充...` instead of inventing numbers.
+- If useful metrics are missing, recommend the relevant metric, calculation method, or assumptions instead of inventing numbers; for simulated projects, do not turn this into a request to verify real business data.
 - Do not output citations, footnotes, corner markers, or source labels.
 - Do not turn AI keywords into standalone capability lists. Embed `RAG`, `Embedding`, `Prompt`, `Agent`, `Bad Case`, etc. inside product decisions, business constraints, or evaluation logic.
 
 ## Data Evidence Protocol
 
-Before rewriting metrics, classify each number into one of these evidence types:
+### 学员课程 / 模拟项目：数据逻辑优先
+
+当用户明确说明是课程、模拟或陪跑项目，或材料清楚体现这一性质时，按该项目语境分析；不反复询问是否有真实上线数据。混合简历按各项目分别判断，模拟项目规则不覆盖实际工作经历。
+
+- 把学员提供的模拟数字、方案测算和目标值作为项目设定，检查其逻辑连贯性。不能仅因缺少真实业务凭证就建议删除数字，也不自行补造数值或上线成果。
+- 重点检查指标定义、分子分母、样本量、时间窗口、对比基线、测算假设和数值之间的关系；区分相对提升、百分点变化、耗时减少与效率提升。简历、PRD、评测和项目成果的口径应一致。
+- `修改建议`只指出发现的具体问题及改法，例如“从 20 分钟缩短到 5 分钟，对应耗时降低 75%；如果写效率提升，需统一计算口径”。数据已经连贯时，不机械追加数据提醒。
+- 面向学员的建议不得出现“请核实数据真实性”“确认是否真实”“不真实就不要写”“真实发生才写”等真实性劝诫，也不换成同义说辞反复提醒。需要补充的应是推导依据、指标口径或前后衔接，例如“补一句测算依据，确保效率提升和耗时变化能相互对应”。
+- 项目背景可一次交代课程 / 模拟性质；具体数字按材料使用“模拟评测”“样本测算”或“目标”等简洁表述，不把模拟结果改成真实上线业绩，也不在每条建议后重复加免责声明。
+
+### 内部口径判断
+
+Before rewriting metrics, internally classify each number into one of these evidence types. This classification guides wording; it is not a mandatory student-facing audit or checklist. For course/simulated projects, apply the section above when writing feedback:
 
 1. `真实上线数据`: already launched or piloted, with explicit usage scale, time range, users, orders, documents, reports, accuracy, cost, efficiency, or adoption data in the source.
 2. `试点/内测数据`: generated from a pilot, internal test, demo group, sample set, or first-month trial. Keep words like `试点`, `内测`, `样本`, `首月`, or `覆盖...人/份`.
@@ -108,16 +120,9 @@ Before rewriting metrics, classify each number into one of these evidence types:
 4. `PRD目标/测算数据`: target, expected effect, ROI estimate, MVP success metric, or pre-launch calculation. Must use `预计`, `目标`, `基于样本测算`, or `MVP目标`.
 5. `建议补充数据`: useful but missing. Write it as a recommendation, not as resume content.
 
-If changing any original resume metric, explicitly tell the user before the rewritten content:
+When a concrete logical inconsistency requires changing a metric or its expression, explain the original wording, correction, and calculation in `修改建议`; do not add a separate boilerplate `数据口径调整说明`. If the assumptions are insufficient to derive a correction, recommend the missing calculation basis rather than silently changing the number.
 
-```markdown
-数据口径调整说明：
-1. 原简历写法：...
-   调整为：...
-   原因：...
-```
-
-Do not upgrade `试点/内测数据` or `PRD目标/测算数据` into `真实上线数据`. If the user says a metric is real, ask or infer the missing口径: launch scope, sample size, time window, user group, baseline, and measurement method.
+Do not upgrade `试点/内测数据` or `PRD目标/测算数据` into `真实上线数据`. For actual work projects, use the provided context to check scope, sample size, time window, baseline, and measurement method; ask only when a missing definition materially affects the rewrite, rather than routinely requesting authenticity confirmation.
 
 ## AI PM Capability Model
 
@@ -165,6 +170,7 @@ Naturally include relevant keywords in project descriptions. Do not stuff them m
 
 1. Read the resume, PRD/project document, and JD if provided.
 2. Infer and confirm the candidate profile before rewriting.
+   Identify course/simulated projects from the supplied context and apply their metric-logic rules when drafting feedback.
 3. Diagnose whether the resume is too generic, too long, too PRD-like, too feature-list-like, keyword-stuffed, rigidly templated, missing AI PM keywords, or missing business value.
 4. Decide section strategy:
    - `个人总结/个人优势`: first-impression capability dimensions + evidence + transfer value.
@@ -231,6 +237,22 @@ For owner-style work experience, prefer this structure:
 
 Keep projects concise. Do not write a long PRD in resume form.
 
+#### 职业化项目表述
+
+项目介绍采用“背景讲定位，工作内容讲判断与方案，成果讲效果”的分工：
+
+- **项目背景**：用 1—2 句交代目标用户、业务场景、核心痛点、产品定位与目标价值。推荐组织为`面向目标用户的核心场景，针对关键问题，设计 / 建设某类产品，支持什么目标`，不强求塞满所有要素。可以概括核心能力，但不展开功能清单、技术链路、操作步骤或审批节点。
+- **工作内容**：讲候选人作出的关键判断、方案取舍、能力组织、实现或验证机制及个人贡献。How主要放在这里，包含技术与流程如何配合、异常如何处理、哪里由人接管。“由顾问确认后发送”等具体人机分工应放到相关工作条目；背景需要体现产品定位时用“AI辅助”概括即可。
+- **项目成果**：讲交付产物、评测 / 测算结果或指标变化及其意义，沿用本 Skill 的数据口径规则；不重复背景中的目标，也不把工作步骤当作效果。
+
+5W仅作为内部完整性检查：Who是目标用户及服务对象，What是产品或方案定位，When是使用阶段，Where是业务场景或渠道，Why是痛点与项目目的。背景不必按五个字段逐项写满，也不输出5W填空表；日期通常在项目名称旁交代，阶段、地点或渠道仅在影响定位且材料支持时写入，不为补齐5W添加信息。
+
+优先使用“面向、针对、设计、建设、构建、提供、形成”等准确动词，压缩口语叙述。“规划、设计、验证、建设、上线”按材料所处阶段使用，不因职业化润色扩大候选人责任或项目成熟度。
+
+工作内容使用`提炼后的短标题 + 核心判断 / 方案 + 关键机制或价值`。短标题应让面试官看见具体产品能力、技术重点或价值，避免仅写“需求分析、产品设计、技术实现、项目优化”，也不把技术名词堆成标题。例如，“需求分析”可提炼为“高频任务与MVP边界”，“技术实现”可提炼为“混合检索与引用溯源”，“项目优化”可提炼为“问答评测与失败归因”，但只选材料能够支撑的表达。
+
+每条正文先写候选人的关键动作与取舍，再保留能说明方案的必要机制及其作用。专业性与复杂度来自具体约束、方案取舍和解决能力；不靠增加修饰词、堆叠框架或拔高职责体现。短标题和正文各有信息，不重复复述同一套名词。
+
 Project bullets must be chosen dynamically from the candidate's background and strongest evidence. Do not force every project into the same fixed information blocks.
 
 Use first principles to choose 3-4 work-content bullets for the core project. Each bullet should answer one interviewer judgment question and may combine several technical details when they serve the same product decision.
@@ -241,7 +263,7 @@ Dynamic block selection algorithm:
 
 1. Identify the candidate's strongest real constraints: industry, user role, data boundary, compliance risk, cost/latency limit, launch status, team ownership, and target JD.
 2. Select the 3-4 interviewer questions the project can best answer: `Why this scene`, `Why this AI route`, `How to make it trustworthy`, `How to make it deployable`, `How to evaluate and iterate`, `What business value was proven`.
-3. Name each block after the candidate's actual product decision, not after a generic taxonomy. Examples: `需求调研与MVP划定`, `AI链路与可信度设计`, `知识库治理与产品化落地`, `评测体系与Bad Case迭代`.
+3. Name each block after the candidate's specific product decision, technical focus, or value contribution. Prefer project-specific titles such as `高频任务与MVP边界`, `混合检索与引用溯源`, `知识权限与版本治理`, `问答评测与失败归因`; adapt them to the material rather than copying a generic taxonomy.
 4. Merge or split blocks to avoid repetition. For example, `技术选型`, `RAG`, and `反幻觉` can be one block when they jointly prove trustworthy AI design; `知识库治理` should be separate when the project depends on knowledge quality, permissions, or traceability.
 5. Limit core-project work content to four bullets. Use four only when every bullet proves a distinct capability and can be defended from source evidence.
 
@@ -263,7 +285,7 @@ Selection guidance:
 - For Agent platform projects, prioritize `Agent/Workflow产品化`, `平台治理与工程化`, `模型/RAG/插件统一调度`, `模板生态与场景落地`.
 - For RAG knowledge assistant projects, prioritize `知识库与数据治理`, `RAG与反幻觉`, `评测体系与Bad Case迭代`, `业务场景拆解`.
 - For e-commerce/operations/data-query projects, prioritize `业务场景拆解`, `Tool Calling/NL2SQL`, `商品/价格/规则知识库`, `A/B或业务指标验证`.
-- For intern/0-1 year candidates, keep blocks narrower: `场景理解`, `PRD/原型`, `AI链路理解`, `评测/Bad Case意识`.
+- For intern/0-1 year candidates, keep scope narrower while retaining specific titles, such as `核心场景与原型验证`, `知识问答流程设计`, `样本评测与问题分类`; reflect their own design and validation work without implying platform ownership or production delivery.
 
 Recommended structure:
 
@@ -356,6 +378,7 @@ Keep `工作经历` compressed and keep `项目介绍` high-density. A complete 
 - Do not write like a consulting report.
 - Do not write like a PRD summary.
 - Do not overuse generic verbs like `参与`, `负责` without explaining the product logic.
+- In project descriptions, use concise product-oriented wording and specific short titles; every professional term should clarify the product or candidate contribution.
 - Make each sentence carry business understanding or AI product capability.
 
 ## Few-Shots
@@ -393,31 +416,31 @@ Only transfer the writing structure and density from few-shots:
 ### 项目经历 Few-Shot 1
 
 - 项目名称：AI商品运营决策Agent
-- 项目背景：面向运营、商品、策略、BI团队，建设AI商品运营决策Agent，解决日常运营提问、商品价格/属性查询、运营规则口径解释、数据问题查询和手动拉数依赖人工响应的问题，提升问题处理效率与数据口径一致性。
+- 项目背景：面向运营、商品、策略及BI团队的日常决策与取数场景，针对知识查询与数据获取依赖人工响应的问题，建设AI商品运营决策Agent，提升问题处理效率与数据口径一致性。
 - 工作内容：
-1. 业务场景拆解：梳理运营日常高频问题，将商品价格、商品属性、活动规则、字段口径、历史数据查询等需求拆解为知识问答、Tool Calling、数据取数和结果解释四类能力。
-2. Agent链路设计：设计`意图识别/实体抽取-Embedding检索-RAG召回-Query改写-工具调用-结构化回答`的Agent链路，支持规则知识库检索、商品/价格字段查询、自然语言转SQL、权限校验和可解释结果输出，并使用Vibe Coding快速搭建可交互Demo验证问答、取数和结构化输出流程。
-3. Badcase优化闭环：建立问题分类、未命中原因、错误口径、SQL失败、结果不可解释等Badcase标签体系，推动知识库切分、Embedding召回、Prompt调优、Query改写、字段映射和工具调用策略持续迭代。
+1. 高频任务与能力边界：将商品价格、属性、活动规则及历史数据查询需求拆解为知识问答、工具调用、数据取数和结果解释，明确不同任务的处理路径。
+2. 知识检索与取数编排：设计意图识别、RAG检索与工具调用链路，结合Query改写、字段映射和权限校验提供可解释的结构化回答；通过Vibe Coding搭建交互Demo，验证问答与取数流程。
+3. 问答评测与失败归因：建立未命中、口径错误、SQL失败和结果不可解释等Bad Case分类，驱动知识切分、召回策略、Prompt和工具调用迭代。
 - 项目成果：运营日常提问响应效率提升2倍+，人工拉数需求下降50%+，高频问题自助解决率提升至80%+，商品价格与属性类问题的数据口径一致性显著提升。
 
 ### 项目经历 Few-Shot 2
 
 - 项目名称：AI商品上新Agent
-- 项目背景：面向商家日常上新、商品信息维护、类目属性填写、标题/卖点生成、详情丰富度补全与审核校验等场景，建设AI商品上新Agent，解决商品资料填写项多、人工处理成本高、Badcase复发、信息完整度不稳定、上新效率低的问题。
+- 项目背景：面向商家上新与商品信息维护场景，针对资料填写繁琐、信息完整度不稳定和审核反复的问题，建设AI商品上新Agent，提高上新效率与信息质量。
 - 工作内容：
-1. 商品上新链路结构化：梳理商品发布必填/选填字段、类目属性、资质材料、卖点标签、图文规范与审核规则，沉淀字段结构、类目模板和商品信息质量评分体系。
-2. 上新Agent生成与补全：设计`商品信息解析-属性抽取-类目/属性推荐-大模型生成-规则校验-人工确认`的Agent链路，基于RAG搭建商品知识库，覆盖商品上新规则、类目属性、审核规范和历史Badcase，通过Chunking策略优化知识切分与召回效率，并结合Prompt调优、Query改写/实体纠错提升填写效率与质量稳定性。
-3. Badcase优化与迭代闭环：搭建商品丰富度、字段完整率、上新通过率、审核驳回原因、商家采纳率等指标体系，支持Badcase聚类、错误归因、规则迭代和反馈闭环。
+1. 商品字段与质量标准：梳理发布字段、类目属性、资质及审核规则，形成类目模板和商品信息质量评分体系，统一生成与校验依据。
+2. 内容生成与审核协同：设计属性推荐、大模型生成、规则校验及人工确认链路；基于RAG组织上新规则与历史Bad Case，通过知识切分、Prompt调优和实体纠错提高生成质量与填写效率。
+3. 上新评测与问题回流：围绕字段完整率、上新通过率、商家采纳率及驳回原因建立指标体系，通过Bad Case聚类与归因驱动规则和生成策略迭代。
 - 项目成果：推动商品上新从人工逐项填写升级为上新Agent辅助生成与校验，人效提升2倍+，单商品信息填写耗时降低50%+，上架商品数量提升30%+，商品信息丰富度提升20%+，字段完整率与审核通过率显著改善。
 
 ### 项目经历 Few-Shot 3
 
 - 项目名称：AI智能比价和价格策略
-- 项目背景：面向直播间、活动商品、国补商品、站外低价等复杂价格场景，建设AI智能比价与价格策略决策链路，解决规则复杂、人工判断成本高、策略建议不稳定、效果复盘难的问题。
+- 项目背景：面向商品运营与策略人员的直播、活动、国补及站外比价场景，针对规则复杂、人工判断成本高及建议不稳定的问题，建设AI比价与价格策略产品，提升价格决策效率与建议稳定性。
 - 工作内容：
-1. 复杂规则知识化：将比价规则、类目策略、价格口径、审核标准和历史案例沉淀为规则知识库，设计规则标签、Multi-Recall、Embedding Retrieval和Rerank机制，支撑策略建议前的规则检索与证据引用。
-2. AI策略建议产品化：设计`Item Matching-Knowledge Retrieval-Rerank-价格评分-策略建议-人工复核`的AI决策链路，基于竞品价、站内价、历史价格、活动状态、销量、库存、类目竞争强度等多因子生成建议价格、追价优先级和风险提示。
-3. 评测与迭代闭环：搭建自动评测、置信度分层、人工抽检/复核、Badcase标注和实验验证机制，围绕AI建议采纳率、同款识别准确率、异常召回率、单样本评估成本等指标持续优化。
+1. 比价口径与规则检索：将类目策略、价格口径、审核标准及历史案例组织为规则知识库，通过多路召回与Rerank支撑规则匹配和依据引用。
+2. 多因子价格决策：构建同款识别、价格评分、策略建议与人工复核链路，结合竞品价、历史价格、活动状态、销量及库存生成建议价格、追价优先级和风险提示。
+3. 策略评测与置信度分层：设计自动评测、人工抽检和Bad Case标注机制，结合实验验证持续优化建议采纳率、同款识别准确率、异常召回率及单样本评估成本。
 - 项目成果：推动5次算法大规模迭代、30+项产品优化，沉淀千万级商品/价格数据；实现人效提升2倍+、单样本评估成本降低50%+、数据准确性提升至90%+、核心指标提升20%+。
 
 ## Final Quality Check
@@ -430,10 +453,13 @@ Before final output, verify:
 - Does work experience avoid duplicating project experience?
 - Does AI PM work experience visibly foreground AI product scenarios and productized AI capabilities, instead of traditional delivery history?
 - Were core-project information blocks dynamically chosen from the candidate's background and target role, rather than forced into a fixed template?
+- Does the project background clarify positioning using 5W as a check rather than a rigid template, with How and specific human handoff points placed in work content and effects placed in project outcomes?
+- Do short titles highlight specific product decisions, technical focus, or candidate value without exaggerating scope? Is the same information unnecessarily repeated across background, work content, and outcomes?
 - Does the core project include AI PM keywords naturally?
 - Does evaluation/Bad Case content explain measurement, failure type, and iteration action instead of stacking metric names?
 - Does the writing show business understanding, not generic polishing?
-- Are estimates and target metrics labeled correctly?
-- If any original metric was changed, has the user been told explicitly?
+- Are project context, metric definitions, assumptions, calculations, and conclusions consistent?
+- For course/simulated projects, does `修改建议` address specific logical issues without authenticity reminders or generic data warnings?
+- If any original metric was changed for a concrete inconsistency, is the correction explained in `修改建议`?
 - Are few-shot examples used only as structure, not copied across domains?
 - Is the answer limited to `修改建议` and `修改后的内容` after profile confirmation?

@@ -1,0 +1,1711 @@
+{
+  "snapshot_date": "2026-10-03",
+  "selection": "enabled_in_any_runtime",
+  "skill_count": 142,
+  "skills": [
+    {
+      "name": "ab-testing",
+      "directory": "ab-testing",
+      "enabled": {
+        "claude": true,
+        "codex": true,
+        "gemini": false,
+        "opencode": false,
+        "hermes": false,
+        "grokbuild": false
+      }
+    },
+    {
+      "name": "ai-pm-coaching",
+      "directory": "ai-pm-coaching",
+      "enabled": {
+        "claude": true,
+        "codex": true,
+        "gemini": false,
+        "opencode": false,
+        "hermes": false,
+        "grokbuild": false
+      }
+    },
+    {
+      "name": "ai-product-interview",
+      "directory": "ai-product-interview",
+      "enabled": {
+        "claude": true,
+        "codex": true,
+        "gemini": false,
+        "opencode": false,
+        "hermes": false,
+        "grokbuild": false
+      }
+    },
+    {
+      "name": "ai-product-resume-analysis",
+      "directory": "ai-product-resume-analysis",
+      "enabled": {
+        "claude": true,
+        "codex": true,
+        "gemini": false,
+        "opencode": false,
+        "hermes": false,
+        "grokbuild": false
+      }
+    },
+    {
+      "name": "ai-product-suite",
+      "directory": "ai-product-suite",
+      "enabled": {
+        "claude": true,
+        "codex": true,
+        "gemini": false,
+        "opencode": false,
+        "hermes": false,
+        "grokbuild": false
+      }
+    },
+    {
+      "name": "ai-seo",
+      "directory": "ai-seo",
+      "enabled": {
+        "claude": true,
+        "codex": true,
+        "gemini": false,
+        "opencode": false,
+        "hermes": false,
+        "grokbuild": false
+      }
+    },
+    {
+      "name": "analytics",
+      "directory": "analytics",
+      "enabled": {
+        "claude": true,
+        "codex": true,
+        "gemini": false,
+        "opencode": false,
+        "hermes": false,
+        "grokbuild": false
+      }
+    },
+    {
+      "name": "autoplan",
+      "directory": "autoplan",
+      "enabled": {
+        "claude": true,
+        "codex": true,
+        "gemini": false,
+        "opencode": false,
+        "hermes": false,
+        "grokbuild": false
+      }
+    },
+    {
+      "name": "awesome-gpt-image-2",
+      "directory": "awesome-gpt-image-2",
+      "enabled": {
+        "claude": true,
+        "codex": true,
+        "gemini": false,
+        "opencode": false,
+        "hermes": false,
+        "grokbuild": false
+      }
+    },
+    {
+      "name": "brainstorming",
+      "directory": "brainstorming",
+      "enabled": {
+        "claude": true,
+        "codex": true,
+        "gemini": false,
+        "opencode": false,
+        "hermes": false,
+        "grokbuild": false
+      }
+    },
+    {
+      "name": "canghe-post-to-wechat",
+      "directory": "canghe-post-to-wechat",
+      "enabled": {
+        "claude": true,
+        "codex": true,
+        "gemini": false,
+        "opencode": false,
+        "hermes": false,
+        "grokbuild": false
+      }
+    },
+    {
+      "name": "codex",
+      "directory": "codex",
+      "enabled": {
+        "claude": true,
+        "codex": true,
+        "gemini": false,
+        "opencode": false,
+        "hermes": false,
+        "grokbuild": false
+      }
+    },
+    {
+      "name": "cognitive-review",
+      "directory": "cognitive-review",
+      "enabled": {
+        "claude": true,
+        "codex": true,
+        "gemini": false,
+        "opencode": false,
+        "hermes": false,
+        "grokbuild": false
+      }
+    },
+    {
+      "name": "comet",
+      "directory": "comet",
+      "enabled": {
+        "claude": true,
+        "codex": true,
+        "gemini": true,
+        "opencode": false,
+        "hermes": false,
+        "grokbuild": false
+      }
+    },
+    {
+      "name": "comet-any",
+      "directory": "comet-any",
+      "enabled": {
+        "claude": true,
+        "codex": true,
+        "gemini": true,
+        "opencode": false,
+        "hermes": false,
+        "grokbuild": false
+      }
+    },
+    {
+      "name": "comet-archive",
+      "directory": "comet-archive",
+      "enabled": {
+        "claude": true,
+        "codex": true,
+        "gemini": true,
+        "opencode": false,
+        "hermes": false,
+        "grokbuild": false
+      }
+    },
+    {
+      "name": "comet-build",
+      "directory": "comet-build",
+      "enabled": {
+        "claude": true,
+        "codex": true,
+        "gemini": true,
+        "opencode": false,
+        "hermes": false,
+        "grokbuild": false
+      }
+    },
+    {
+      "name": "comet-classic",
+      "directory": "comet-classic",
+      "enabled": {
+        "claude": true,
+        "codex": true,
+        "gemini": true,
+        "opencode": false,
+        "hermes": false,
+        "grokbuild": false
+      }
+    },
+    {
+      "name": "comet-design",
+      "directory": "comet-design",
+      "enabled": {
+        "claude": true,
+        "codex": true,
+        "gemini": true,
+        "opencode": false,
+        "hermes": false,
+        "grokbuild": false
+      }
+    },
+    {
+      "name": "comet-hotfix",
+      "directory": "comet-hotfix",
+      "enabled": {
+        "claude": true,
+        "codex": true,
+        "gemini": true,
+        "opencode": false,
+        "hermes": false,
+        "grokbuild": false
+      }
+    },
+    {
+      "name": "comet-native",
+      "directory": "comet-native",
+      "enabled": {
+        "claude": true,
+        "codex": true,
+        "gemini": true,
+        "opencode": false,
+        "hermes": false,
+        "grokbuild": false
+      }
+    },
+    {
+      "name": "comet-open",
+      "directory": "comet-open",
+      "enabled": {
+        "claude": true,
+        "codex": true,
+        "gemini": true,
+        "opencode": false,
+        "hermes": false,
+        "grokbuild": false
+      }
+    },
+    {
+      "name": "comet-tweak",
+      "directory": "comet-tweak",
+      "enabled": {
+        "claude": true,
+        "codex": true,
+        "gemini": true,
+        "opencode": false,
+        "hermes": false,
+        "grokbuild": false
+      }
+    },
+    {
+      "name": "comet-verify",
+      "directory": "comet-verify",
+      "enabled": {
+        "claude": true,
+        "codex": true,
+        "gemini": true,
+        "opencode": false,
+        "hermes": false,
+        "grokbuild": false
+      }
+    },
+    {
+      "name": "competitor-profiling",
+      "directory": "competitor-profiling",
+      "enabled": {
+        "claude": true,
+        "codex": true,
+        "gemini": false,
+        "opencode": false,
+        "hermes": false,
+        "grokbuild": false
+      }
+    },
+    {
+      "name": "content-remix",
+      "directory": "content-remix",
+      "enabled": {
+        "claude": true,
+        "codex": true,
+        "gemini": false,
+        "opencode": false,
+        "hermes": false,
+        "grokbuild": false
+      }
+    },
+    {
+      "name": "content-strategy",
+      "directory": "content-strategy",
+      "enabled": {
+        "claude": true,
+        "codex": true,
+        "gemini": false,
+        "opencode": false,
+        "hermes": false,
+        "grokbuild": false
+      }
+    },
+    {
+      "name": "context-restore",
+      "directory": "context-restore",
+      "enabled": {
+        "claude": true,
+        "codex": true,
+        "gemini": false,
+        "opencode": false,
+        "hermes": false,
+        "grokbuild": false
+      }
+    },
+    {
+      "name": "context-save",
+      "directory": "context-save",
+      "enabled": {
+        "claude": true,
+        "codex": true,
+        "gemini": false,
+        "opencode": false,
+        "hermes": false,
+        "grokbuild": false
+      }
+    },
+    {
+      "name": "copy-editing",
+      "directory": "copy-editing",
+      "enabled": {
+        "claude": true,
+        "codex": true,
+        "gemini": false,
+        "opencode": false,
+        "hermes": false,
+        "grokbuild": false
+      }
+    },
+    {
+      "name": "customer-research",
+      "directory": "customer-research",
+      "enabled": {
+        "claude": true,
+        "codex": true,
+        "gemini": false,
+        "opencode": false,
+        "hermes": false,
+        "grokbuild": false
+      }
+    },
+    {
+      "name": "deep-research",
+      "directory": "deep-research",
+      "enabled": {
+        "claude": true,
+        "codex": true,
+        "gemini": false,
+        "opencode": false,
+        "hermes": false,
+        "grokbuild": false
+      }
+    },
+    {
+      "name": "deep-research-deep",
+      "directory": "deep-research-deep",
+      "enabled": {
+        "claude": true,
+        "codex": true,
+        "gemini": false,
+        "opencode": false,
+        "hermes": false,
+        "grokbuild": false
+      }
+    },
+    {
+      "name": "deep-research-report",
+      "directory": "deep-research-report",
+      "enabled": {
+        "claude": true,
+        "codex": true,
+        "gemini": false,
+        "opencode": false,
+        "hermes": false,
+        "grokbuild": false
+      }
+    },
+    {
+      "name": "dispatching-parallel-agents",
+      "directory": "dispatching-parallel-agents",
+      "enabled": {
+        "claude": true,
+        "codex": true,
+        "gemini": false,
+        "opencode": false,
+        "hermes": false,
+        "grokbuild": false
+      }
+    },
+    {
+      "name": "docx",
+      "directory": "docx",
+      "enabled": {
+        "claude": true,
+        "codex": true,
+        "gemini": false,
+        "opencode": false,
+        "hermes": false,
+        "grokbuild": false
+      }
+    },
+    {
+      "name": "docx-to-markdown-fidelity",
+      "directory": "docx-to-markdown-fidelity",
+      "enabled": {
+        "claude": true,
+        "codex": true,
+        "gemini": false,
+        "opencode": false,
+        "hermes": false,
+        "grokbuild": false
+      }
+    },
+    {
+      "name": "excalidraw-canvas-builder",
+      "directory": "excalidraw-canvas-builder",
+      "enabled": {
+        "claude": true,
+        "codex": true,
+        "gemini": false,
+        "opencode": false,
+        "hermes": false,
+        "grokbuild": false
+      }
+    },
+    {
+      "name": "executing-plans",
+      "directory": "executing-plans",
+      "enabled": {
+        "claude": true,
+        "codex": true,
+        "gemini": false,
+        "opencode": false,
+        "hermes": false,
+        "grokbuild": false
+      }
+    },
+    {
+      "name": "find-skills",
+      "directory": "find-skills",
+      "enabled": {
+        "claude": true,
+        "codex": true,
+        "gemini": false,
+        "opencode": false,
+        "hermes": false,
+        "grokbuild": false
+      }
+    },
+    {
+      "name": "finishing-a-development-branch",
+      "directory": "finishing-a-development-branch",
+      "enabled": {
+        "claude": true,
+        "codex": false,
+        "gemini": false,
+        "opencode": false,
+        "hermes": false,
+        "grokbuild": false
+      }
+    },
+    {
+      "name": "guard",
+      "directory": "guard",
+      "enabled": {
+        "claude": true,
+        "codex": true,
+        "gemini": false,
+        "opencode": false,
+        "hermes": false,
+        "grokbuild": false
+      }
+    },
+    {
+      "name": "guizang-social-card-skill",
+      "directory": "guizang-social-card-skill",
+      "enabled": {
+        "claude": true,
+        "codex": true,
+        "gemini": false,
+        "opencode": false,
+        "hermes": false,
+        "grokbuild": false
+      }
+    },
+    {
+      "name": "gx-bus-design-review",
+      "directory": "gx-bus-design-review",
+      "enabled": {
+        "claude": true,
+        "codex": true,
+        "gemini": false,
+        "opencode": false,
+        "hermes": false,
+        "grokbuild": false
+      }
+    },
+    {
+      "name": "gx-bus-implementation-audit",
+      "directory": "gx-bus-implementation-audit",
+      "enabled": {
+        "claude": true,
+        "codex": true,
+        "gemini": false,
+        "opencode": false,
+        "hermes": false,
+        "grokbuild": false
+      }
+    },
+    {
+      "name": "gx-zhks-frontend-design",
+      "directory": "gx-zhks-frontend-design",
+      "enabled": {
+        "claude": true,
+        "codex": true,
+        "gemini": false,
+        "opencode": false,
+        "hermes": false,
+        "grokbuild": false
+      }
+    },
+    {
+      "name": "harness-eval",
+      "directory": "harness-eval",
+      "enabled": {
+        "claude": true,
+        "codex": true,
+        "gemini": false,
+        "opencode": false,
+        "hermes": false,
+        "grokbuild": false
+      }
+    },
+    {
+      "name": "health",
+      "directory": "health",
+      "enabled": {
+        "claude": true,
+        "codex": true,
+        "gemini": false,
+        "opencode": false,
+        "hermes": false,
+        "grokbuild": false
+      }
+    },
+    {
+      "name": "huashu-wechat-image",
+      "directory": "huashu-wechat-image",
+      "enabled": {
+        "claude": true,
+        "codex": true,
+        "gemini": false,
+        "opencode": false,
+        "hermes": false,
+        "grokbuild": false
+      }
+    },
+    {
+      "name": "hue",
+      "directory": "hue",
+      "enabled": {
+        "claude": false,
+        "codex": true,
+        "gemini": false,
+        "opencode": false,
+        "hermes": false,
+        "grokbuild": false
+      }
+    },
+    {
+      "name": "human-writing",
+      "directory": "human-writing",
+      "enabled": {
+        "claude": true,
+        "codex": true,
+        "gemini": false,
+        "opencode": false,
+        "hermes": false,
+        "grokbuild": false
+      }
+    },
+    {
+      "name": "humanizer-zh",
+      "directory": "humanizer-zh",
+      "enabled": {
+        "claude": true,
+        "codex": true,
+        "gemini": false,
+        "opencode": false,
+        "hermes": false,
+        "grokbuild": false
+      }
+    },
+    {
+      "name": "image-assistant",
+      "directory": "image-assistant",
+      "enabled": {
+        "claude": true,
+        "codex": true,
+        "gemini": false,
+        "opencode": false,
+        "hermes": false,
+        "grokbuild": false
+      }
+    },
+    {
+      "name": "investigate",
+      "directory": "investigate",
+      "enabled": {
+        "claude": true,
+        "codex": true,
+        "gemini": false,
+        "opencode": false,
+        "hermes": false,
+        "grokbuild": false
+      }
+    },
+    {
+      "name": "json-canvas",
+      "directory": "json-canvas",
+      "enabled": {
+        "claude": true,
+        "codex": true,
+        "gemini": false,
+        "opencode": false,
+        "hermes": false,
+        "grokbuild": false
+      }
+    },
+    {
+      "name": "khazix-writer",
+      "directory": "khazix-writer",
+      "enabled": {
+        "claude": true,
+        "codex": true,
+        "gemini": false,
+        "opencode": false,
+        "hermes": false,
+        "grokbuild": false
+      }
+    },
+    {
+      "name": "lark-approval",
+      "directory": "lark-approval",
+      "enabled": {
+        "claude": true,
+        "codex": true,
+        "gemini": false,
+        "opencode": false,
+        "hermes": false,
+        "grokbuild": false
+      }
+    },
+    {
+      "name": "lark-attendance",
+      "directory": "lark-attendance",
+      "enabled": {
+        "claude": true,
+        "codex": true,
+        "gemini": false,
+        "opencode": false,
+        "hermes": false,
+        "grokbuild": false
+      }
+    },
+    {
+      "name": "lark-base",
+      "directory": "lark-base",
+      "enabled": {
+        "claude": true,
+        "codex": true,
+        "gemini": false,
+        "opencode": false,
+        "hermes": false,
+        "grokbuild": false
+      }
+    },
+    {
+      "name": "lark-calendar",
+      "directory": "lark-calendar",
+      "enabled": {
+        "claude": true,
+        "codex": true,
+        "gemini": false,
+        "opencode": false,
+        "hermes": false,
+        "grokbuild": false
+      }
+    },
+    {
+      "name": "lark-contact",
+      "directory": "lark-contact",
+      "enabled": {
+        "claude": true,
+        "codex": true,
+        "gemini": false,
+        "opencode": false,
+        "hermes": false,
+        "grokbuild": false
+      }
+    },
+    {
+      "name": "lark-doc",
+      "directory": "lark-doc",
+      "enabled": {
+        "claude": true,
+        "codex": true,
+        "gemini": false,
+        "opencode": false,
+        "hermes": false,
+        "grokbuild": false
+      }
+    },
+    {
+      "name": "lark-drive",
+      "directory": "lark-drive",
+      "enabled": {
+        "claude": true,
+        "codex": true,
+        "gemini": false,
+        "opencode": false,
+        "hermes": false,
+        "grokbuild": false
+      }
+    },
+    {
+      "name": "lark-event",
+      "directory": "lark-event",
+      "enabled": {
+        "claude": true,
+        "codex": true,
+        "gemini": false,
+        "opencode": false,
+        "hermes": false,
+        "grokbuild": false
+      }
+    },
+    {
+      "name": "lark-im",
+      "directory": "lark-im",
+      "enabled": {
+        "claude": true,
+        "codex": true,
+        "gemini": false,
+        "opencode": false,
+        "hermes": false,
+        "grokbuild": false
+      }
+    },
+    {
+      "name": "lark-mail",
+      "directory": "lark-mail",
+      "enabled": {
+        "claude": true,
+        "codex": true,
+        "gemini": false,
+        "opencode": false,
+        "hermes": false,
+        "grokbuild": false
+      }
+    },
+    {
+      "name": "lark-markdown",
+      "directory": "lark-markdown",
+      "enabled": {
+        "claude": true,
+        "codex": true,
+        "gemini": false,
+        "opencode": false,
+        "hermes": false,
+        "grokbuild": false
+      }
+    },
+    {
+      "name": "lark-minutes",
+      "directory": "lark-minutes",
+      "enabled": {
+        "claude": true,
+        "codex": true,
+        "gemini": false,
+        "opencode": false,
+        "hermes": false,
+        "grokbuild": false
+      }
+    },
+    {
+      "name": "lark-okr",
+      "directory": "lark-okr",
+      "enabled": {
+        "claude": true,
+        "codex": true,
+        "gemini": false,
+        "opencode": false,
+        "hermes": false,
+        "grokbuild": false
+      }
+    },
+    {
+      "name": "lark-openapi-explorer",
+      "directory": "lark-openapi-explorer",
+      "enabled": {
+        "claude": true,
+        "codex": true,
+        "gemini": false,
+        "opencode": false,
+        "hermes": false,
+        "grokbuild": false
+      }
+    },
+    {
+      "name": "lark-shared",
+      "directory": "lark-shared",
+      "enabled": {
+        "claude": true,
+        "codex": true,
+        "gemini": false,
+        "opencode": false,
+        "hermes": false,
+        "grokbuild": false
+      }
+    },
+    {
+      "name": "lark-sheets",
+      "directory": "lark-sheets",
+      "enabled": {
+        "claude": true,
+        "codex": true,
+        "gemini": false,
+        "opencode": false,
+        "hermes": false,
+        "grokbuild": false
+      }
+    },
+    {
+      "name": "lark-skill-maker",
+      "directory": "lark-skill-maker",
+      "enabled": {
+        "claude": true,
+        "codex": true,
+        "gemini": false,
+        "opencode": false,
+        "hermes": false,
+        "grokbuild": false
+      }
+    },
+    {
+      "name": "lark-slides",
+      "directory": "lark-slides",
+      "enabled": {
+        "claude": true,
+        "codex": true,
+        "gemini": false,
+        "opencode": false,
+        "hermes": false,
+        "grokbuild": false
+      }
+    },
+    {
+      "name": "lark-task",
+      "directory": "lark-task",
+      "enabled": {
+        "claude": true,
+        "codex": true,
+        "gemini": false,
+        "opencode": false,
+        "hermes": false,
+        "grokbuild": false
+      }
+    },
+    {
+      "name": "lark-vc",
+      "directory": "lark-vc",
+      "enabled": {
+        "claude": true,
+        "codex": true,
+        "gemini": false,
+        "opencode": false,
+        "hermes": false,
+        "grokbuild": false
+      }
+    },
+    {
+      "name": "lark-vc-agent",
+      "directory": "lark-vc-agent",
+      "enabled": {
+        "claude": true,
+        "codex": true,
+        "gemini": false,
+        "opencode": false,
+        "hermes": false,
+        "grokbuild": false
+      }
+    },
+    {
+      "name": "lark-whiteboard",
+      "directory": "lark-whiteboard",
+      "enabled": {
+        "claude": true,
+        "codex": true,
+        "gemini": false,
+        "opencode": false,
+        "hermes": false,
+        "grokbuild": false
+      }
+    },
+    {
+      "name": "lark-wiki",
+      "directory": "lark-wiki",
+      "enabled": {
+        "claude": true,
+        "codex": true,
+        "gemini": false,
+        "opencode": false,
+        "hermes": false,
+        "grokbuild": false
+      }
+    },
+    {
+      "name": "lark-workflow-meeting-summary",
+      "directory": "lark-workflow-meeting-summary",
+      "enabled": {
+        "claude": true,
+        "codex": true,
+        "gemini": false,
+        "opencode": false,
+        "hermes": false,
+        "grokbuild": false
+      }
+    },
+    {
+      "name": "lark-workflow-standup-report",
+      "directory": "lark-workflow-standup-report",
+      "enabled": {
+        "claude": true,
+        "codex": true,
+        "gemini": false,
+        "opencode": false,
+        "hermes": false,
+        "grokbuild": false
+      }
+    },
+    {
+      "name": "launch",
+      "directory": "launch",
+      "enabled": {
+        "claude": true,
+        "codex": true,
+        "gemini": false,
+        "opencode": false,
+        "hermes": false,
+        "grokbuild": false
+      }
+    },
+    {
+      "name": "leader",
+      "directory": "leader",
+      "enabled": {
+        "claude": true,
+        "codex": true,
+        "gemini": false,
+        "opencode": false,
+        "hermes": false,
+        "grokbuild": false
+      }
+    },
+    {
+      "name": "make-pdf",
+      "directory": "make-pdf",
+      "enabled": {
+        "claude": true,
+        "codex": true,
+        "gemini": false,
+        "opencode": false,
+        "hermes": false,
+        "grokbuild": false
+      }
+    },
+    {
+      "name": "marketing-psychology",
+      "directory": "marketing-psychology",
+      "enabled": {
+        "claude": true,
+        "codex": true,
+        "gemini": false,
+        "opencode": false,
+        "hermes": false,
+        "grokbuild": false
+      }
+    },
+    {
+      "name": "markitdown",
+      "directory": "markitdown",
+      "enabled": {
+        "claude": true,
+        "codex": true,
+        "gemini": false,
+        "opencode": false,
+        "hermes": false,
+        "grokbuild": false
+      }
+    },
+    {
+      "name": "media-writer",
+      "directory": "media-writer",
+      "enabled": {
+        "claude": true,
+        "codex": true,
+        "gemini": false,
+        "opencode": false,
+        "hermes": false,
+        "grokbuild": false
+      }
+    },
+    {
+      "name": "memory-extractor",
+      "directory": "memory-extractor",
+      "enabled": {
+        "claude": true,
+        "codex": true,
+        "gemini": false,
+        "opencode": false,
+        "hermes": false,
+        "grokbuild": false
+      }
+    },
+    {
+      "name": "mp-writing-assistant",
+      "directory": "mp-writing-assistant",
+      "enabled": {
+        "claude": true,
+        "codex": true,
+        "gemini": false,
+        "opencode": false,
+        "hermes": false,
+        "grokbuild": false
+      }
+    },
+    {
+      "name": "obsidian",
+      "directory": "obsidian",
+      "enabled": {
+        "claude": true,
+        "codex": true,
+        "gemini": false,
+        "opencode": false,
+        "hermes": false,
+        "grokbuild": false
+      }
+    },
+    {
+      "name": "obsidian-notes",
+      "directory": "obsidian-notes",
+      "enabled": {
+        "claude": true,
+        "codex": true,
+        "gemini": false,
+        "opencode": false,
+        "hermes": false,
+        "grokbuild": false
+      }
+    },
+    {
+      "name": "office-hours",
+      "directory": "office-hours",
+      "enabled": {
+        "claude": true,
+        "codex": true,
+        "gemini": false,
+        "opencode": false,
+        "hermes": false,
+        "grokbuild": false
+      }
+    },
+    {
+      "name": "openspec-apply-change",
+      "directory": "openspec-apply-change",
+      "enabled": {
+        "claude": true,
+        "codex": true,
+        "gemini": false,
+        "opencode": false,
+        "hermes": false,
+        "grokbuild": false
+      }
+    },
+    {
+      "name": "openspec-archive-change",
+      "directory": "openspec-archive-change",
+      "enabled": {
+        "claude": true,
+        "codex": true,
+        "gemini": false,
+        "opencode": false,
+        "hermes": false,
+        "grokbuild": false
+      }
+    },
+    {
+      "name": "openspec-bulk-archive-change",
+      "directory": "openspec-bulk-archive-change",
+      "enabled": {
+        "claude": true,
+        "codex": true,
+        "gemini": true,
+        "opencode": false,
+        "hermes": false,
+        "grokbuild": false
+      }
+    },
+    {
+      "name": "openspec-continue-change",
+      "directory": "openspec-continue-change",
+      "enabled": {
+        "claude": true,
+        "codex": true,
+        "gemini": true,
+        "opencode": false,
+        "hermes": false,
+        "grokbuild": false
+      }
+    },
+    {
+      "name": "openspec-explore",
+      "directory": "openspec-explore",
+      "enabled": {
+        "claude": true,
+        "codex": true,
+        "gemini": false,
+        "opencode": false,
+        "hermes": false,
+        "grokbuild": false
+      }
+    },
+    {
+      "name": "openspec-ff-change",
+      "directory": "openspec-ff-change",
+      "enabled": {
+        "claude": true,
+        "codex": true,
+        "gemini": true,
+        "opencode": false,
+        "hermes": false,
+        "grokbuild": false
+      }
+    },
+    {
+      "name": "openspec-new-change",
+      "directory": "openspec-new-change",
+      "enabled": {
+        "claude": true,
+        "codex": true,
+        "gemini": true,
+        "opencode": false,
+        "hermes": false,
+        "grokbuild": false
+      }
+    },
+    {
+      "name": "openspec-onboard",
+      "directory": "openspec-onboard",
+      "enabled": {
+        "claude": true,
+        "codex": true,
+        "gemini": true,
+        "opencode": false,
+        "hermes": false,
+        "grokbuild": false
+      }
+    },
+    {
+      "name": "openspec-propose",
+      "directory": "openspec-propose",
+      "enabled": {
+        "claude": true,
+        "codex": true,
+        "gemini": false,
+        "opencode": false,
+        "hermes": false,
+        "grokbuild": false
+      }
+    },
+    {
+      "name": "openspec-sync-specs",
+      "directory": "openspec-sync-specs",
+      "enabled": {
+        "claude": true,
+        "codex": true,
+        "gemini": false,
+        "opencode": false,
+        "hermes": false,
+        "grokbuild": false
+      }
+    },
+    {
+      "name": "openspec-verify-change",
+      "directory": "openspec-verify-change",
+      "enabled": {
+        "claude": true,
+        "codex": true,
+        "gemini": true,
+        "opencode": false,
+        "hermes": false,
+        "grokbuild": false
+      }
+    },
+    {
+      "name": "pdf",
+      "directory": "pdf",
+      "enabled": {
+        "claude": true,
+        "codex": true,
+        "gemini": false,
+        "opencode": false,
+        "hermes": false,
+        "grokbuild": false
+      }
+    },
+    {
+      "name": "personal-showcase-page",
+      "directory": "personal-showcase-page",
+      "enabled": {
+        "claude": true,
+        "codex": true,
+        "gemini": false,
+        "opencode": false,
+        "hermes": false,
+        "grokbuild": false
+      }
+    },
+    {
+      "name": "plan-ceo-review",
+      "directory": "plan-ceo-review",
+      "enabled": {
+        "claude": true,
+        "codex": true,
+        "gemini": false,
+        "opencode": false,
+        "hermes": false,
+        "grokbuild": false
+      }
+    },
+    {
+      "name": "plan-design-review",
+      "directory": "plan-design-review",
+      "enabled": {
+        "claude": true,
+        "codex": true,
+        "gemini": false,
+        "opencode": false,
+        "hermes": false,
+        "grokbuild": false
+      }
+    },
+    {
+      "name": "plan-eng-review",
+      "directory": "plan-eng-review",
+      "enabled": {
+        "claude": true,
+        "codex": true,
+        "gemini": false,
+        "opencode": false,
+        "hermes": false,
+        "grokbuild": false
+      }
+    },
+    {
+      "name": "planning-with-files",
+      "directory": "planning-with-files",
+      "enabled": {
+        "claude": true,
+        "codex": true,
+        "gemini": false,
+        "opencode": false,
+        "hermes": false,
+        "grokbuild": false
+      }
+    },
+    {
+      "name": "playwright",
+      "directory": "playwright",
+      "enabled": {
+        "claude": true,
+        "codex": true,
+        "gemini": false,
+        "opencode": false,
+        "hermes": false,
+        "grokbuild": false
+      }
+    },
+    {
+      "name": "pricing",
+      "directory": "pricing",
+      "enabled": {
+        "claude": true,
+        "codex": true,
+        "gemini": false,
+        "opencode": false,
+        "hermes": false,
+        "grokbuild": false
+      }
+    },
+    {
+      "name": "problem-solving-sop",
+      "directory": "problem-solving-sop",
+      "enabled": {
+        "claude": true,
+        "codex": true,
+        "gemini": false,
+        "opencode": false,
+        "hermes": false,
+        "grokbuild": false
+      }
+    },
+    {
+      "name": "product-marketing",
+      "directory": "product-marketing",
+      "enabled": {
+        "claude": true,
+        "codex": true,
+        "gemini": false,
+        "opencode": false,
+        "hermes": false,
+        "grokbuild": false
+      }
+    },
+    {
+      "name": "qa",
+      "directory": "qa",
+      "enabled": {
+        "claude": true,
+        "codex": true,
+        "gemini": false,
+        "opencode": false,
+        "hermes": false,
+        "grokbuild": false
+      }
+    },
+    {
+      "name": "qa-only",
+      "directory": "qa-only",
+      "enabled": {
+        "claude": true,
+        "codex": true,
+        "gemini": false,
+        "opencode": false,
+        "hermes": false,
+        "grokbuild": false
+      }
+    },
+    {
+      "name": "receiving-code-review",
+      "directory": "receiving-code-review",
+      "enabled": {
+        "claude": true,
+        "codex": true,
+        "gemini": false,
+        "opencode": false,
+        "hermes": false,
+        "grokbuild": false
+      }
+    },
+    {
+      "name": "req-spec-suite",
+      "directory": "req-spec-suite",
+      "enabled": {
+        "claude": true,
+        "codex": true,
+        "gemini": false,
+        "opencode": false,
+        "hermes": false,
+        "grokbuild": false
+      }
+    },
+    {
+      "name": "requesting-code-review",
+      "directory": "requesting-code-review",
+      "enabled": {
+        "claude": true,
+        "codex": true,
+        "gemini": false,
+        "opencode": false,
+        "hermes": false,
+        "grokbuild": false
+      }
+    },
+    {
+      "name": "review",
+      "directory": "review",
+      "enabled": {
+        "claude": true,
+        "codex": true,
+        "gemini": false,
+        "opencode": false,
+        "hermes": false,
+        "grokbuild": false
+      }
+    },
+    {
+      "name": "seo-audit",
+      "directory": "seo-audit",
+      "enabled": {
+        "claude": true,
+        "codex": true,
+        "gemini": false,
+        "opencode": false,
+        "hermes": false,
+        "grokbuild": false
+      }
+    },
+    {
+      "name": "skill-creator",
+      "directory": "skill-creator",
+      "enabled": {
+        "claude": true,
+        "codex": true,
+        "gemini": false,
+        "opencode": false,
+        "hermes": false,
+        "grokbuild": false
+      }
+    },
+    {
+      "name": "skill-manager",
+      "directory": "skill-manager",
+      "enabled": {
+        "claude": true,
+        "codex": true,
+        "gemini": false,
+        "opencode": false,
+        "hermes": false,
+        "grokbuild": false
+      }
+    },
+    {
+      "name": "subagent-driven-development",
+      "directory": "subagent-driven-development",
+      "enabled": {
+        "claude": true,
+        "codex": true,
+        "gemini": false,
+        "opencode": false,
+        "hermes": false,
+        "grokbuild": false
+      }
+    },
+    {
+      "name": "systematic-debugging",
+      "directory": "systematic-debugging",
+      "enabled": {
+        "claude": true,
+        "codex": true,
+        "gemini": false,
+        "opencode": false,
+        "hermes": false,
+        "grokbuild": false
+      }
+    },
+    {
+      "name": "task-landscape-analysis",
+      "directory": "task-landscape-analysis",
+      "enabled": {
+        "claude": true,
+        "codex": true,
+        "gemini": false,
+        "opencode": false,
+        "hermes": false,
+        "grokbuild": false
+      }
+    },
+    {
+      "name": "test-driven-development",
+      "directory": "test-driven-development",
+      "enabled": {
+        "claude": true,
+        "codex": true,
+        "gemini": false,
+        "opencode": false,
+        "hermes": false,
+        "grokbuild": false
+      }
+    },
+    {
+      "name": "thought-mining",
+      "directory": "thought-mining",
+      "enabled": {
+        "claude": true,
+        "codex": true,
+        "gemini": false,
+        "opencode": false,
+        "hermes": false,
+        "grokbuild": false
+      }
+    },
+    {
+      "name": "ui-ux-pro-max",
+      "directory": "ui-ux-pro-max",
+      "enabled": {
+        "claude": true,
+        "codex": true,
+        "gemini": false,
+        "opencode": false,
+        "hermes": false,
+        "grokbuild": false
+      }
+    },
+    {
+      "name": "user-story-writer",
+      "directory": "user-story-writer",
+      "enabled": {
+        "claude": true,
+        "codex": true,
+        "gemini": false,
+        "opencode": false,
+        "hermes": false,
+        "grokbuild": false
+      }
+    },
+    {
+      "name": "using-git-worktrees",
+      "directory": "using-git-worktrees",
+      "enabled": {
+        "claude": true,
+        "codex": true,
+        "gemini": false,
+        "opencode": false,
+        "hermes": false,
+        "grokbuild": false
+      }
+    },
+    {
+      "name": "using-superpowers",
+      "directory": "using-superpowers",
+      "enabled": {
+        "claude": true,
+        "codex": true,
+        "gemini": false,
+        "opencode": false,
+        "hermes": false,
+        "grokbuild": false
+      }
+    },
+    {
+      "name": "verification-before-completion",
+      "directory": "verification-before-completion",
+      "enabled": {
+        "claude": true,
+        "codex": true,
+        "gemini": false,
+        "opencode": false,
+        "hermes": false,
+        "grokbuild": false
+      }
+    },
+    {
+      "name": "verification-gate",
+      "directory": "verification-gate",
+      "enabled": {
+        "claude": true,
+        "codex": true,
+        "gemini": false,
+        "opencode": false,
+        "hermes": false,
+        "grokbuild": false
+      }
+    },
+    {
+      "name": "vibe-coding",
+      "directory": "vibe-coding",
+      "enabled": {
+        "claude": true,
+        "codex": true,
+        "gemini": false,
+        "opencode": false,
+        "hermes": false,
+        "grokbuild": false
+      }
+    },
+    {
+      "name": "web-access",
+      "directory": "web-access",
+      "enabled": {
+        "claude": true,
+        "codex": true,
+        "gemini": false,
+        "opencode": false,
+        "hermes": false,
+        "grokbuild": false
+      }
+    },
+    {
+      "name": "wechat-title",
+      "directory": "wechat-title",
+      "enabled": {
+        "claude": true,
+        "codex": true,
+        "gemini": false,
+        "opencode": false,
+        "hermes": false,
+        "grokbuild": false
+      }
+    },
+    {
+      "name": "wechat-writer",
+      "directory": "wechat-writer",
+      "enabled": {
+        "claude": true,
+        "codex": true,
+        "gemini": false,
+        "opencode": false,
+        "hermes": false,
+        "grokbuild": false
+      }
+    },
+    {
+      "name": "weekly-report-writer",
+      "directory": "weekly-report-writer",
+      "enabled": {
+        "claude": true,
+        "codex": true,
+        "gemini": false,
+        "opencode": false,
+        "hermes": false,
+        "grokbuild": false
+      }
+    },
+    {
+      "name": "wewrite",
+      "directory": "wewrite",
+      "enabled": {
+        "claude": true,
+        "codex": true,
+        "gemini": false,
+        "opencode": false,
+        "hermes": false,
+        "grokbuild": false
+      }
+    },
+    {
+      "name": "writing-plans",
+      "directory": "writing-plans",
+      "enabled": {
+        "claude": true,
+        "codex": true,
+        "gemini": false,
+        "opencode": false,
+        "hermes": false,
+        "grokbuild": false
+      }
+    },
+    {
+      "name": "writing-skills",
+      "directory": "writing-skills",
+      "enabled": {
+        "claude": true,
+        "codex": true,
+        "gemini": false,
+        "opencode": false,
+        "hermes": false,
+        "grokbuild": false
+      }
+    },
+    {
+      "name": "xlsx",
+      "directory": "xlsx",
+      "enabled": {
+        "claude": true,
+        "codex": true,
+        "gemini": false,
+        "opencode": false,
+        "hermes": false,
+        "grokbuild": false
+      }
+    }
+  ]
+}

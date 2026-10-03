@@ -5,6 +5,8 @@ description: "仅在用户明确调用 /comet-verify，或由 Comet 根 Skill/ru
 
 # Comet 阶段 4：验证（Verify）
 
+入口按 `comet/reference/start-gate.md` 核对当前规格与预算。按已批准的验收场景最终验证，复用相同代码、规格和命令的有效通过证据；文档任务不运行网页 QA，网页任务只读检查批准场景和受影响页面，QA 只报告不改码。项目 AGENTS.md 要求完整回归时仍执行或先请用户调整。Bundle 试点通过 `workflow-policy.mjs run-check` 运行单条不超过 10 分钟的命令。
+
 ## 前置条件
 
 - 代码已提交（阶段 3 完成）
@@ -29,7 +31,7 @@ comet state check <change-name> verify
 
 若上述 `select` / `check` 输出 `BLOCKED`，且原因是 `bound_branch` 与当前分支不一致，立即按 `comet/reference/decision-point.md` 暂停，让用户单选：切回绑定分支后重新运行入口验证，或在用户明确确认当前分支应接管该 change 后运行 `comet state rebind <change-name>` 并重新入口验证。不得自行切换分支，不得自行换绑。
 
-**幂等性**：verify 阶段所有检查可安全重复执行。如 `verify_result` 已为 `pass`，说明验证已完成并应进入 archive；`branch_status` 在归档提交和最终分支处理完成前保持 `pending`。如 `verify_result` 为 `pending`，从头开始验证。
+**幂等性**：相同代码、规格和命令的通过证据可以复用；失败或证据失效时只补做受影响检查。如 `verify_result` 已为 `pass`，说明验证已完成并应进入 archive；`branch_status` 在归档提交和最终分支处理完成前保持 `pending`。
 
 ### 1. 改动规模评估
 
@@ -39,7 +41,7 @@ comet state check <change-name> verify
 comet state scale <change-name>
 ```
 
-脚本自动统计任务数、增量规格数、变更文件数，判断使用 light 或 full 验证模式，并设置 verify_mode 字段。判定规则（满足任一即 full）：任务数 > 3、delta spec 能力数 > 1、变更文件数 > 8。
+脚本仍统计任务数、增量规格数和变更文件数作为风险提示；verify_mode 以已批准验收场景、实际影响面和项目规则决定。文件数本身不触发重复全量测试；项目规则要求的完整回归不能因 verify_mode 而跳过。
 
 验证开始前，按 `comet/reference/dirty-worktree.md` 协议检查并处理未提交改动。verify 阶段的特殊处理：
 
@@ -73,7 +75,7 @@ comet state set <change-name> verify_mode full
 
 ### 1b. 验证失败自动修复与例外决策
 
-先运行 `comet state get <change-name> verify_failures` 读取已持久化的连续失败次数。前 3 次可修复失败自动回到 build：报告失败项后运行 `comet state transition <change-name> verify-fail`，再调用 `/comet-build` 修复，不需要用户确认。
+先运行 `comet state get <change-name> verify_failures` 并读取本次开工预算。最多 1 轮自动回 build 做定向修复；同一失败重复、无实质进展、预算到限或第一轮复测仍失败时，保存证据与下一步并暂停，续跑等待新预算确认。
 
 报告必须列出：
 - 失败项
@@ -87,7 +89,7 @@ comet state set <change-name> verify_mode full
 - **WARNING/SUGGESTION 且修复会引入行为、范围或风险取舍**：按 `comet/reference/decision-point.md` 让用户选择修复或接受偏差；接受时必须在验证报告中记录原因和影响范围
 - **WARNING/SUGGESTION 且修复安全、局部、无取舍**：未达到上限时自动修复，不因级别较低而强制停顿
 
-只有接受 WARNING/SUGGESTION 偏差或第 4 次失败后的策略选择才是用户决策点。当前 `verify_failures >= 3` 时不得自动执行下一次 `verify-fail`；按协议只提供「继续修复」或「停止当前 workflow 并寻求外部决策」两个选项。用户选择继续后才记录下一次失败并回到 build。CRITICAL/IMPORTANT 始终不可豁免。
+只有未超过已批准返工预算且问题可定向修复时才自动运行 `verify-fail`。当前预算允许的 1 轮已用尽后不得自动重试；用户确认新预算后才继续。CRITICAL/IMPORTANT 始终不可豁免。
 
 ### 2. 产物上下文加载（Hash 按需读）
 
@@ -109,14 +111,13 @@ comet handoff <change-name> --hash-only
 
 ### 2a. 轻量验证（小改动）
 
-按以下 6 项进行检查：
+按以下 5 项进行检查：
 
 1. tasks.md 全部任务已完成 `[x]`
 2. 改动文件与 tasks.md 描述一致（`git diff --stat` / `git diff --cached --stat` / `git diff --stat <base-ref>...HEAD` 对照 tasks 内容）
-3. 编译通过（执行项目对应的构建命令，如 `npm run build`、`mvn compile`、`cargo build` 等）
-4. 相关测试通过
+3. 编译通过（若 build 已在相同代码和规格摘要下通过，直接引用其证据；否则执行受影响构建命令）
+4. 相关测试通过（相同命令与代码摘要的通过证据直接复用，补跑未覆盖的批准场景）
 5. 无明显安全问题（无硬编码密钥、无新增 unsafe 操作）
-6. 代码审查策略：当 `review_mode: standard` 或 `thorough` 时，必须使用 Skill 工具加载 Superpowers `requesting-code-review` 技能，请求只检查正确性、安全、边界条件的轻量代码审查；当 `review_mode: off` 时跳过自动代码审查，并在验证报告中记录跳过原因
 
 若项目没有可自动探测的验证命令，用户或 Agent 必须先自行运行真实验证命令，再单独记录验证证据：
 
@@ -126,11 +127,9 @@ comet state record-check <change-name> verify --command "<实际运行的验证�
 
 `--command` 只记录命令文本，Comet **绝不会执行该文本**。verify 与 build 证据彼此独立，不能互相替代；即使兼容流程使用 `COMET_SKIP_BUILD=1`，也不能把该绕过标记视为可审计的验证或构建证据。
 
-简化代码审查的输入应限定为本次改动 diff、tasks.md 和必要的测试结果；审查范围只覆盖实现正确性、安全风险和边界条件，不执行 spec 覆盖率、Design Doc 一致性或漂移检查。若审查发现 CRITICAL 或 IMPORTANT 问题，按 Step 1b 的自动修复/重试规则处理。`review_mode: off` 只跳过自动 code review，不跳过构建、测试、安全检查或异常调试协议。
+代码审查已由 build 或 Bundle review 节点对当前完整 diff 完成；verify 不再发起第二次普通审查。代码变化使原审查证据失效时，先回 review 对新 diff 审查。
 
-**与 build 阶段审查的去重**：若 build 阶段（`executing-plans` 或 `subagent-driven-development`）已按 `review_mode` 对同一 diff 完成最终代码审查，verify 的这次轻量审查聚焦「实现是否符合 spec/tasks 的正确性」与「build 之后新增的改动」，不重复评审 build 已审过且未变化的 diff。
-
-**通过标准**：6 项全部 OK，无 CRITICAL 或 IMPORTANT 问题。
+**通过标准**：5 项全部 OK，无 CRITICAL 或 IMPORTANT 问题。
 
 **不通过时**：报告失败项并按 Step 1b 分类。未达到自动修复上限且问题必须或适合修复时，直接执行以下命令回到 build 阶段，然后调用 `/comet-build`：
 
@@ -138,10 +137,9 @@ comet state record-check <change-name> verify --command "<实际运行的验证�
 comet state transition <change-name> verify-fail
 ```
 
-**报告格式**：简表列出 6 项检查结果 + PASS/FAIL。
+**报告格式**：简表列出 5 项检查结果 + PASS/FAIL。
 
 **跳过项**（不在轻量验证中检查）：
-- spec scenario 覆盖率
 - design doc 一致性深度比对
 - 不影响正确性、安全、边界条件的 code pattern consistency 建议
 - delta spec 与 design doc 漂移检测
@@ -153,6 +151,7 @@ comet state transition <change-name> verify-fail
 **立即执行：** 使用 Skill 工具加载 `openspec-verify-change` 技能。禁止跳过此步骤。
 
 技能加载后，按其指引验证。检查项：
+对已在相同代码和规格摘要下通过的测试引用原始命令与结果，不因 full 模式重复运行；只补齐尚未覆盖的已批准场景。项目规则要求全量回归时照做。
 1. tasks.md 全部任务已完成（`[x]`）
 2. 实现符合 `openspec/changes/<name>/design.md` 高层设计决策
 3. 实现符合 Design Doc（`docs/superpowers/specs/` 下的技术设计文档）

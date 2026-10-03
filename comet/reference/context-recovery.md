@@ -41,7 +41,7 @@ comet state check <change-name> <phase> --recover
 3. 读取 `openspec/changes/<name>/.comet/subagent-progress.md`，恢复当前 task 或 final review、实现提交、RED/GREEN 证据、已通过审查、未解决反馈和审查-修复轮次
 4. 禁止在主会话中直接执行 task
 5. 按检查点记录的精确阶段恢复；检查点缺失或不匹配时才从第一个未勾选 task 的 implementer 派发开始
-6. task 按 `review_mode` 完成验收并完成定向勾选验证后，立即继续下一个 task，不得总结或询问是否继续
+6. 当前 task 完成已批准的定向检查后记录证据并继续；完整 diff 审查只在所有任务完成后执行一次。恢复时先核对开工确认的规格摘要和剩余预算，失效或到限则保存交接并暂停
 
 ## design 阶段特殊恢复
 

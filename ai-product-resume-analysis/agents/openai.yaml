@@ -1,4 +1,4 @@
 interface:
   display_name: "AI 产品简历分析"
-  short_description: "分析并优化 AI 产品经理简历，严守真实证据"
-  default_prompt: "Use $ai-product-resume-analysis to confirm my candidate profile, then analyze and revise my resume from my real resume draft, project documents, and target role."
+  short_description: "分析并优化 AI 产品经理简历，结合项目语境检查数据逻辑与岗位匹配"
+  default_prompt: "Use $ai-product-resume-analysis to confirm my candidate profile, then analyze and revise my resume from the provided project context, consistent metric definitions, and target role."

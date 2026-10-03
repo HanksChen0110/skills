@@ -51,3 +51,22 @@ __MACOSX/
 
 
 *.exe
+
+# Local dependencies, caches and credentials
+node_modules/
+.git/
+.venv/
+venv/
+.cache/
+.env
+.env.*
+*.env
+!.env.example
+!.env.template
+!*.env.example
+!*.env.template
+*.pem
+*.key
+credentials.json
+auth.json
+cookies.json

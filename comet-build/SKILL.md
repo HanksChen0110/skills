@@ -5,6 +5,8 @@ description: "仅在用户明确调用 /comet-build，或由 Comet 根 Skill/run
 
 # Comet 阶段 3：计划与构建（Build）
 
+本阶段执行前按 `comet/reference/start-gate.md` 检查当前规格、规则和预算。未确认、摘要漂移或预算到期时不写代码、不运行测试或审查。只运行受改动影响且已批准的检查；项目 AGENTS.md 强制完整回归时必须执行或先请用户调整。Bundle 试点用 `workflow-policy.mjs run-check` 限制单条命令 10 分钟并复用相同代码/规格的通过证据。
+
 ## 前置条件
 
 - Design Doc 已创建（阶段 2 完成）
@@ -155,8 +157,8 @@ comet state set <name> isolation <current|branch|worktree>
 
 | 选项 | 含义 | 适用场景 |
 |------|------|---------|
-| `tdd` | 每个任务先写失败测试再写实现 | 推荐。变更涉及业务逻辑、新功能、API |
-| `direct` | 实现优先，不强制逐任务 Red-Green-Refactor | 仍需运行相关测试并为 bug 修复保留回归证据；hotfix/tweak 预设默认使用 `direct` |
+| `tdd` | 对高风险逻辑或 bug 修复先写能失败的针对性测试 | 需要真实回归证据时选择 |
+| `direct` | 实现优先，不强制逐任务 Red-Green-Refactor | 默认建议；仍需完成已批准的针对性检查及项目规则要求的回归 |
 
 运行 `comet state set <name> tdd_mode <tdd|direct>`
 
@@ -164,9 +166,9 @@ comet state set <name> isolation <current|branch|worktree>
 
 | 选项 | 含义 | 适用场景 |
 |------|------|---------|
-| `off` | 不自动派发代码审查 | 文档、配置、文案、小范围低风险任务 |
-| `standard` | 默认不为每任务派发 reviewer，仅当任务命中风险信号时派发每任务 reviewer，外加一次最终轻量代码审查 | 默认推荐，适合大多数普通改动 |
-| `thorough` | 为每个任务派发每任务 reviewer（spec + quality），外加一次最终完整审查 | 高风险、多模块、架构或安全相关改动 |
+| `off` | 未启用 Bundle 时跳过自动审查；Bundle 启用时 overlay 仍对完整 diff 审查一次 | 文档、配置、文案、小范围低风险任务 |
+| `standard` | 当前完整 diff 一次审查，不派发每任务 reviewer | 默认推荐，适合大多数普通改动 |
+| `thorough` | 当前完整 diff 审查一次，再做独立第二审 | 仅开工确认标为高风险的改动 |
 
 运行 `comet state set <name> review_mode <off|standard|thorough>`
 
@@ -237,11 +239,11 @@ comet state select <change-name>
 
 **`executing-plans` review gate**：
 
-在 `executing-plans` 下，主会话直接执行任务（没有隔离的 implementer subagent），因此不存在 `subagent-driven-development` 那样的每任务 reviewer。代码审查针对已完成的 diff 进行，并按 `review_mode` 分级：
+代码审查只针对当前完整 diff，不按任务或实现段拆分。Bundle 已启用时由 overlay review 节点完成这一次审查，build 不重复运行；未启用 Bundle 时按下列模式执行：
 
-- **`review_mode: off`**：不自动代码审查。不加载 `requesting-code-review`。在验证报告草稿或 tasks.md 中记录跳过原因。
+- **`review_mode: off`**：未启用 Bundle 时跳过自动代码审查，并在验证报告草稿或 tasks.md 记录原因；Bundle 启用时由 overlay review 节点审查一次。
 - **`review_mode: standard`**：在所有计划任务完成后、运行 build → verify 阶段守卫前，使用 Skill 工具加载 Superpowers `requesting-code-review` 技能一次，请求一次轻量代码审查（正确性、安全、边界），范围覆盖整个 change。
-- **`review_mode: thorough`**：除最终那次审查外，按任务分段每 3 个任务请求一次分段代码审查（范围限于该段的 diff）。若总任务数 ≤ 3，跳过执行中分段，只做最终审查。每次分段审查用 `requesting-code-review` 针对该段的提交区间进行。这是 `executing-plans` 下最接近 `subagent-driven-development` 每任务审查的等价物，因为它没有隔离的 implementer 可供逐任务审查。
+- **`review_mode: thorough`**：仅用于开工确认标为高风险的 change，在完整 diff 一次审查后做独立第二审；不运行分段或逐任务审查。
 
 要求（适用于 `standard` 和 `thorough`）：
 - `requesting-code-review` 技能必须在 `comet guard <change-name> build --apply` 之前加载
@@ -261,7 +263,7 @@ comet state select <change-name>
 
 | 规模 | 触发条件 | 做法 |
 |------|---------|------|
-| 小 | 遗漏验收场景、边界条件 | 直接编辑 delta spec + design.md，追加 tasks.md 任务 |
+| 小 | 遗漏验收场景、边界条件 | 更新 delta spec + design.md、追加 tasks.md；规格摘要失效，重新取得用户对当前版本的开工确认后再实现 |
 | 中 | 接口变更、新增组件、数据流变化 | **使用当前平台可用的用户输入/确认机制暂停并等待用户确认后**，必须使用 Skill 工具加载 Superpowers `brainstorming` 更新 Design Doc + delta spec |
 | 大 | 全新 capability 需求 | **必须使用当前平台可用的用户输入/确认机制暂停并等待用户确认拆分**；用户确认后，通过 `/comet-open` 创建独立 change |
 
@@ -274,7 +276,7 @@ comet state select <change-name>
 - 「继续在当前 change 内完成」— 记录范围扩展决策，更新 tasks.md 和 delta spec 后继续
 
 **原则**：
-- delta spec 是活文档，本阶段期间随时可修改
+- delta spec 可以修改；范围、验收场景或适用规则实质变化后，旧开工确认立即失效，须先重新确认
 - 每次更新应提交，commit message 说明变更原因
 - 不提前同步到 main spec，归档时统一同步
 - 小规模增量直接改 delta spec 时，应在 commit message 中注明，便于归档时判断 design doc 漂移
@@ -283,7 +285,7 @@ comet state select <change-name>
 
 Build 是最长阶段，可能跨越大量任务。为支持上下文压缩后断点恢复：
 
-- **每完成一个 task**：按当前执行分支和 `review_mode` 完成验收后再勾选对应任务并提交。`subagent-driven-development` 在 `off` 时不派发每任务 reviewer；`standard` 下仅当任务命中风险信号时派发；`thorough` 下每个任务都派发每任务 reviewer。所有模式都必须按任务唯一文本完成定向检查。通过解析 tasks.md 复选框统计剩余任务，无需反复读取与当前任务无关的正文
+- **每完成一个 task**：完成该任务必要的定向检查后勾选并提交；当前完整 diff 在 review 节点审查一次。通过解析 tasks.md 复选框统计剩余任务，无需反复读取与当前任务无关的正文
 - **上下文压缩后恢复**：按 `comet/reference/context-recovery.md` 执行，phase 参数为 `build`。
 - **用户手动修改恢复**：按 `comet/reference/dirty-worktree.md` 协议处理未提交改动。该协议定义了检查步骤、归因分类和禁令。build 阶段的特殊处理：
   1. 归因后，若 diff 暗示计划或 spec 已变化，按 Step 4「Spec 增量更新」分级处理
@@ -298,7 +300,7 @@ Build 是最长阶段，可能跨越大量任务。为支持上下文压缩后�
 - `build_mode` 已写为 `subagent-driven-development`、`executing-plans` 或带显式 override 的 `direct`；若为 `subagent-driven-development`，`subagent_dispatch` 必须为 `confirmed`
 - `tdd_mode` 已写为 `tdd` 或 `direct`
 - `review_mode` 已写为 `off`、`standard` 或 `thorough`
-- 已按所选 `review_mode` 完成"执行计划"章节中 executing-plans review gate 规定的代码审查：`standard` 或 `thorough` 下已请求代码审查且 CRITICAL review 发现已修复、非 CRITICAL review 发现已记录接受理由；`review_mode: off` 下已在持久产物中记录跳过自动代码审查的原因
+- 未启用 Bundle 时，已按所选 `review_mode` 完成代码审查或记录跳过原因；启用 Bundle 时，由 overlay review 节点在 build 后对当前完整 diff 审查一次，不在此处重复调用
 - **阶段守卫**：运行 `comet guard <change-name> build --apply`，全部 PASS 后由守卫推进到 `phase: verify`（此步骤更新 `phase` 字段，与 `auto_transition` 无关）
 
 Guard 会运行自动探测到的项目构建检查（检测到时使用 `npm run build`、Maven 或 Cargo）。构建失败时 guard 会打印失败命令输出，作为排查证据。

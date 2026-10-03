@@ -5,6 +5,8 @@ description: "当用户调用 /comet 或需要恢复 active Comet change 时，�
 
 # Comet 入口
 
+Classic + gstack Bundle 的项目级试点先按 `reference/start-gate.md` 确认当前规格、规则和预算；未确认时停止实现、测试与审查。此条不改变 Native/Classic 路由。
+
 `/comet` 只负责选择入口，不包含任何一种工作流的执行方法。
 
 1. 先在当前项目尝试 PATH 中安装的 Comet CLI：

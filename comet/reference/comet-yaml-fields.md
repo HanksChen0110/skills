@@ -42,11 +42,11 @@ archived: false
 | `design_doc` | 关联的 Superpowers Design Doc 路径，可为空 |
 | `plan` | 关联的 Superpowers Plan 路径，可为空 |
 | `base_ref` | init 时记录的 git commit SHA，用于 scale 评估。无 plan 时作为改动文件数统计基准 |
-| `build_mode` | 已选择的执行方式，可为空。取值：`subagent-driven-development`（隔离后台 subagent 逐任务实现并审查）、`executing-plans`（主会话按计划顺序执行）、`direct`（主会话直接编码，默认仅 hotfix/tweak 允许，full workflow 需 `direct_override: true`） |
+| `build_mode` | 已选择的执行方式，可为空。取值：`subagent-driven-development`（隔离后台 subagent 逐任务实现，完成后审查完整 diff）、`executing-plans`（主会话按计划顺序执行）、`direct`（主会话直接编码，默认仅 hotfix/tweak 允许，full workflow 需 `direct_override: true`） |
 | `build_pause` | build 阶段内部暂停点。`null` 表示无暂停，`plan-ready` 表示 plan 已生成，用户选择切换模型后暂停 |
 | `subagent_dispatch` | `null` 或 `confirmed`。仅当已确认当前平台存在真实后台 subagent / Task / multi-agent 调度能力时，`build_mode: subagent-driven-development` 才能写入并用于离开 build 阶段 |
 | `tdd_mode` | `tdd` 或 `direct`。full workflow 离开 build 阶段前必须已选择。`tdd` 强制每个任务先写失败测试再实现；`direct` 不强制逐任务 TDD，但仍需相关测试与 bug 回归证据。hotfix/tweak 默认 `direct` |
-| `review_mode` | `off`、`standard` 或 `thorough`。full workflow 离开 build 阶段前必须已选择；hotfix/tweak 默认 `off` |
+| `review_mode` | `off`、`standard` 或 `thorough`。full workflow 离开 build 阶段前必须已选择；hotfix/tweak 默认 `off`。启用 Bundle 时，overlay review 节点仍对当前完整 diff 审查一次；`thorough` 且高风险时加独立第二审 |
 | `isolation` | `current`、`branch` 或 `worktree`。full 初始化可为 `null`，离开 build 前必须由用户显式选择 `current`、实际创建/选择 `branch`，或实际创建/选择 `worktree`；hotfix/tweak 在入口用户决策点后也可如实使用三种模式，不得在未创建分支时虚构为 `branch` |
 | `bound_branch` | 工作区分支绑定记录，可为空。`isolation: current` / `branch` / `worktree` 首次设置或入口检查时记录命令执行目录所在的当前 Git 分支（worktree 模式请在对应工作区内执行 set/check/guard，否则会绑定/比对错误的分支）；在不同工作区模式之间切换 `isolation` 会重新绑定到当前分支，重复设置同一模式保持原绑定。后续 `comet state select` / `comet state check` 必须确认绑定分支与当前分支一致；漂移时 `select` 直接拒绝、检查进入 `BLOCKED`，按决策点协议让用户选择切回绑定分支或明确确认后运行 `comet state rebind <change-name>`。清空 `isolation` 时会清空该字段 |
 | `verify_mode` | `light` 或 `full`，可为空 |
